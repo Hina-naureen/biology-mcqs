@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BIOLOGY - MULTIPLE CHOICE QUESTIONS (M.C.Qs)</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: Arial, sans-serif;
+  background: #4d4444;
+  color: #d9fff7;
+}
+
+body {
+  padding: 16px;
+  background-image:
+    radial-gradient(circle at top center, rgba(20, 241, 217, 0.10) 0%, rgba(20, 241, 217, 0.04) 22%, rgba(0,0,0,0) 42%),
+    linear-gradient(180deg, #0b0b0b 0%, #050505 100%);
+}
+
+.container {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  background: rgba(8, 8, 8, 0.97);
+  border: 2px solid #3df5df;
+  border-radius: 20px;
+  box-shadow:
+    0 0 14px rgba(61, 245, 223, 0.7),
+    0 0 28px rgba(61, 245, 223, 0.35),
+    inset 0 0 10px rgba(61, 245, 223, 0.08);
+  padding: 18px;
+}
+
+.main-heading {
+  text-align: center;
+  margin: 0;
+  color: #7affea;
+  font-size: clamp(24px, 4vw, 36px);
+  line-height: 1.2;
+  text-shadow:
+    0 0 8px rgba(61,245,223,0.95),
+    0 0 20px rgba(61,245,223,0.35);
+}
+
+.sub-heading {
+  text-align: center;
+  margin: 8px 0 18px;
+  color: #d7fff8;
+  font-size: clamp(14px, 2.5vw, 20px);
+  letter-spacing: 0.5px;
+}
+
+.top-bar {
+  position: sticky;
+  top: 10px;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  background: rgba(10, 10, 10, 0.96);
+  border: 1.5px solid #3df5df;
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow:
+    0 0 10px rgba(61,245,223,0.35),
+    inset 0 0 8px rgba(61,245,223,0.06);
+  margin-bottom: 18px;
+  backdrop-filter: blur(4px);
+}
+
+#timer {
+  font-size: clamp(18px, 3vw, 25px);
+  font-weight: bold;
+  color: #ff4d4d;
+  text-shadow: 0 0 8px rgba(255,0,0,0.8);
+}
+
+#progress {
+  font-size: clamp(13px, 2vw, 16px);
+  color: #aefef1;
+}
+
+.question {
+  margin-bottom: 18px;
+  padding: 16px;
+  background: linear-gradient(180deg, rgba(15,15,15,0.98), rgba(22,22,22,0.98));
+  border: 1.5px solid #3df5df;
+  border-radius: 16px;
+  box-shadow:
+    0 0 10px rgba(61,245,223,0.35),
+    inset 0 0 8px rgba(61,245,223,0.04);
+}
+
+.question p {
+  margin: 0 0 12px;
+  font-size: clamp(15px, 2.4vw, 19px);
+  font-weight: bold;
+  line-height: 1.5;
+  color: #dcfff8;
+}
+
+.option {
+  display: block;
+  margin: 8px 0;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: 0.2s ease;
+  color: #d8fff8;
+  font-size: clamp(14px, 2vw, 17px);
+  line-height: 1.5;
+}
+
+.option:hover {
+  background: rgba(61, 245, 223, 0.08);
+  border-color: rgba(61, 245, 223, 0.35);
+  box-shadow: 0 0 8px rgba(61,245,223,0.14);
+}
+
+input[type="radio"] {
+  accent-color: #3df5df;
+  margin-right: 8px;
+  transform: scale(1.05);
+}
+
+.correct {
+  color: #32ff7e;
+  font-weight: bold;
+  margin-top: 10px;
+  text-shadow: 0 0 8px rgba(50,255,126,0.5);
+  font-size: clamp(13px, 2vw, 16px);
+}
+
+.wrong {
+  color: #ff5f5f;
+  font-weight: bold;
+  margin-top: 10px;
+  text-shadow: 0 0 8px rgba(255,95,95,0.45);
+  font-size: clamp(13px, 2vw, 16px);
+}
+
+#submitBtn {
+  display: block;
+  width: min(100%, 260px);
+  margin: 24px auto 10px;
+  padding: 14px 20px;
+  font-size: clamp(16px, 2.5vw, 19px);
+  font-weight: bold;
+  background: #3df5df;
+  color: #001514;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  box-shadow:
+    0 0 14px rgba(61,245,223,0.75),
+    0 0 26px rgba(61,245,223,0.28);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#submitBtn:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 0 18px rgba(61,245,223,0.85),
+    0 0 32px rgba(61,245,223,0.34);
+}
+
+#result {
+  margin-top: 20px;
+  text-align: center;
+  font-size: clamp(18px, 2.5vw, 24px);
+  line-height: 1.8;
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(255,255,255,0.12);
+}
+
+.warning {
+  animation: flicker 0.6s infinite;
+  color: #ff1f1f !important;
+  text-shadow:
+    0 0 10px #ff0000,
+    0 0 18px #ff0000 !important;
+}
+
+@keyframes flicker {
+  0% { opacity: 1; }
+  50% { opacity: 0.65; }
+  100% { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 14px;
+    border-radius: 16px;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 12px;
+  }
+
+  .question {
+    padding: 14px;
+  }
+
+  .option {
+    padding: 9px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 8px;
+  }
+
+  .container {
+    padding: 12px;
+    border-radius: 14px;
+  }
+
+  .question {
+    padding: 12px;
+    border-radius: 14px;
+  }
+
+  .top-bar {
+    top: 6px;
+    border-radius: 12px;
+  }
+
+  #submitBtn {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1 class="main-heading">BIOLOGY</h1>
+  <div class="sub-heading">MULTIPLE CHOICE QUESTIONS (M.C.Qs)</div>
+
+  <div class="top-bar">
+    <div id="timer">Time Left: 05:00</div>
+    <div id="progress">Attempted: 0 / 40</div>
+  </div>
+
+  <form id="quiz"></form>
+
+  <button type="button" id="submitBtn" onclick="submitQuiz()">Submit Quiz</button>
+
+  <h3 id="result"></h3>
+</div>
+
+<script>
+const questions = [
+  {q:"Each stoma is formed by:", options:["One guard cell","Two guard cells","Three guard cells","Four guard cells"], answer:"b"},
+  {q:"Band of connective tissue joining bones:", options:["Ligament","Tendon","Bicep","Tricep"], answer:"a"},
+  {q:"Parents donate same factors:", options:["Homologous","Heterologous","Homozygous","Heterozygous"], answer:"c"},
+  {q:"Seed production without fusion:", options:["Parthenocarpy","Apomixes","Grafting","Scion"], answer:"b"},
+  {q:"Respiratory surface possesses:", options:["Thin & wet","Very large","Permeable","All"], answer:"d"},
+  {q:"Kidney is enclosed in:", options:["Pericardium","Pleura","Peritoneum","Plumule"], answer:"c"},
+  {q:"Defense enzyme in bacteria:", options:["Defense protein","Hydrolytic enzyme","Restriction enzyme","Ligase enzyme"], answer:"c"},
+  {q:"Plants exchange gases through:", options:["Roots","Stomata","Stem","All"], answer:"b"},
+  {q:"Vital functions controlled by:", options:["CNS","PNS","Somatic","Autonomic"], answer:"a"},
+  {q:"Organisms benefit each other:", options:["Parasitism","Mutualism","Commensalism","Predation"], answer:"b"},
+
+  {q:"Larynx is located on:", options:["Lungs","Trachea","Bronchus","Bronchiole"], answer:"b"},
+  {q:"Blood capillaries present in:", options:["Epidermis","Dermis","Hypodermis","Endodermis"], answer:"b"},
+  {q:"Gonads target organ for:", options:["FSH","LH","Both A & B","None"], answer:"c"},
+  {q:"Opposite muscles pair:", options:["Antagonist","Cardiac","Smooth","Abductor"], answer:"a"},
+  {q:"Male gonads in rabbit:", options:["Testis","Ovaries","Scrotal sac","Vas deferens"], answer:"a"},
+  {q:"DNA duplication is called:", options:["Duplication","Replication","Transcription","Translation"], answer:"b"},
+  {q:"Cold war between organisms:", options:["Predation","Competition","Mutualism","Commensalism"], answer:"b"},
+  {q:"Human genome studied by:", options:["PCR","HGP","Medicine","Cloning"], answer:"b"},
+  {q:"Father of antiseptic:", options:["Fleming","Lister","Jenner","Schmiedeberg"], answer:"b"},
+  {q:"Gas exchange function:", options:["Photosynthesis","Respiration","Growth","All"], answer:"b"},
+
+  {q:"Stimulus is detected by:", options:["Receptor","Effector","Nerve","All"], answer:"a"},
+  {q:"3N zygote develops into:", options:["Embryo","Cotyledon","Endosperm","Seed coat"], answer:"c"},
+  {q:"Exact duplication of DNA:", options:["Replication","Transcription","Translation","Duplication"], answer:"a"},
+  {q:"Pair of muscles working opposite:", options:["Cardiac","Smooth","Antagonist","Abductor"], answer:"c"},
+  {q:"Vitamin D deficiency causes:", options:["Osteoporosis","Rickets","Arthritis","Fever"], answer:"b"},
+  {q:"Chromosome material:", options:["Chromatid","Chromatin","Chromomere","Chromonema"], answer:"b"},
+  {q:"Kitab-ul-Manazir written by:", options:["Jabir bin Hayyan","Ibn-ul-Haitham","Ali Ibn-e-Isa","Bu Ali Sina"], answer:"b"},
+  {q:"Dough rises due to:", options:["Water","Oxygen","Carbon dioxide","Nitrogen"], answer:"c"},
+  {q:"Knee joint is:", options:["Ball & socket","Hinge","Sliding","Immovable"], answer:"b"},
+  {q:"Reflex path shortest:", options:["1 neuron","2 neuron","3 neuron","Many"], answer:"b"},
+
+  {q:"Process of removal of metabolic wastes is:", options:["Respiration","Excretion","Digestion","Circulation"], answer:"b"},
+  {q:"Organ for excretion in humans:", options:["Lungs","Kidneys","Skin","All"], answer:"d"},
+  {q:"Functional unit of kidney:", options:["Neuron","Nephron","Alveoli","Cell"], answer:"b"},
+  {q:"Gas exchange occurs in:", options:["Bronchi","Alveoli","Trachea","Larynx"], answer:"b"},
+  {q:"Oxygen transported by:", options:["WBC","RBC","Platelets","Plasma"], answer:"b"},
+  {q:"Hormones are secreted by:", options:["Glands","Neurons","Cells","Tissues"], answer:"a"},
+  {q:"Insulin controls:", options:["Temperature","Sugar level","Breathing","Movement"], answer:"b"},
+  {q:"Brain is part of:", options:["CNS","PNS","ANS","None"], answer:"a"},
+  {q:"Reflex action is:", options:["Slow","Voluntary","Automatic","None"], answer:"c"},
+  {q:"Bone joint type in shoulder:", options:["Hinge","Ball & socket","Fixed","Sliding"], answer:"b"}
+];
+
+const quiz = document.getElementById("quiz");
+const timerEl = document.getElementById("timer");
+const progressEl = document.getElementById("progress");
+const resultEl = document.getElementById("result");
+const submitBtn = document.getElementById("submitBtn");
+
+let submitted = false;
+
+questions.forEach((item, index) => {
+  let html = `<div class="question">
+    <p>${index + 1}. ${item.q}</p>`;
+
+  item.options.forEach((opt, i) => {
+    const val = ["a", "b", "c", "d"][i];
+    html += `
+      <label class="option">
+        <input type="radio" name="q${index}" value="${val}">
+        ${opt}
+      </label>`;
+  });
+
+  html += `<div id="r${index}"></div></div>`;
+  quiz.innerHTML += html;
+});
+
+function updateProgress() {
+  let attempted = 0;
+  questions.forEach((_, index) => {
+    const selected = document.querySelector(`input[name="q${index}"]:checked`);
+    if (selected) attempted++;
+  });
+  progressEl.textContent = `Attempted: ${attempted} / ${questions.length}`;
+}
+
+document.addEventListener("change", updateProgress);
+
+function submitQuiz() {
+  if (submitted) return;
+  submitted = true;
+
+  let score = 0;
+
+  questions.forEach((item, index) => {
+    const selected = document.querySelector(`input[name="q${index}"]:checked`);
+    const box = document.getElementById(`r${index}`);
+    const correctIndex = "abcd".indexOf(item.answer);
+    const correctText = item.options[correctIndex];
+
+    if (!selected) {
+      box.innerHTML = `<div class="wrong">Not Attempted — Correct answer: ${correctText}</div>`;
+      return;
+    }
+
+    if (selected.value === item.answer) {
+      score++;
+      box.innerHTML = `<div class="correct">Correct</div>`;
+    } else {
+      box.innerHTML = `<div class="wrong">Wrong — Correct answer: ${correctText}</div>`;
+    }
+  });
+
+  const percentage = ((score / questions.length) * 100).toFixed(2);
+
+  resultEl.innerHTML = `
+    Score: ${score} / ${questions.length} <br>
+    Percentage: ${percentage}%`;
+
+  clearInterval(timerInterval);
+  submitBtn.disabled = true;
+  submitBtn.style.opacity = "0.6";
+  submitBtn.style.cursor = "not-allowed";
+}
+
+let timeLeft = 5 * 60;
+
+function formatTime(seconds) {
+  const m = Math.floor(seconds / 60);
+  const s = seconds % 60;
+  return `${m}:${s < 10 ? "0" : ""}${s}`;
+}
+
+timerEl.textContent = `Time Left: ${formatTime(timeLeft)}`;
+
+const timerInterval = setInterval(() => {
+  if (submitted) {
+    clearInterval(timerInterval);
+    return;
+  }
+
+  timeLeft--;
+  timerEl.textContent = `Time Left: ${formatTime(timeLeft)}`;
+
+  if (timeLeft <= 30) {
+    timerEl.classList.add("warning");
+  }
+
+  if (timeLeft <= 0) {
+    clearInterval(timerInterval);
+    timerEl.textContent = "Time Left: 0:00";
+    alert("Time is up!");
+    submitQuiz();
+  }
+}, 1000);
+
+updateProgress();
+</script>
+
+</body>
+</html>
