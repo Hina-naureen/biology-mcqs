@@ -1,250 +1,3923 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Matric English MCQs</title>
+<title>AI Quiz Part 1</title>
+
 <style>
-*{box-sizing:border-box;}
 
 body{
-  margin:0;
-  font-family:Arial;
-  background:
-    radial-gradient(circle,#ffe6f0 1px,transparent 1px),
-    linear-gradient(135deg,#ffd6e7,#ffb3d1);
-  background-size:18px 18px;
-  color:#5a0f33;
+    background:#071426;
+    color:white;
+    font-family:Arial, sans-serif;
+    padding:20px;
 }
 
-/* CONTAINER */
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:20px;
-}
-
-/* TITLE */
 h1{
-  text-align:center;
-  color:#8a004f;
-  text-shadow:0 0 15px #ff7ab8;
+    text-align:center;
+    color:#00e5ff;
 }
 
-/* TIMER */
-#timer{
-  text-align:center;
-  font-weight:bold;
-  color:red;
-  margin-bottom:10px;
+.quiz{
+    background:#10243d;
+    padding:20px;
+    margin:20px 0;
+    border-radius:15px;
+    box-shadow:0 0 15px #00e5ff55;
 }
 
-/* CARD */
-.card{
-  background:rgba(255,255,255,0.4);
-  padding:15px;
-  margin:15px 0;
-  border-radius:15px;
-  backdrop-filter:blur(12px);
-  box-shadow:0 10px 25px rgba(0,0,0,0.15);
-  transition:0.3s;
-}
-.card:hover{
-  transform:translateY(-5px) scale(1.01);
+.question{
+    color:#00e5ff;
+    font-size:20px;
 }
 
-/* OPTION */
+.urdu{
+    color:#ffd166;
+    font-size:17px;
+}
+
+.words{
+    background:#162f4d;
+    padding:10px;
+    border-radius:10px;
+}
+
 .option{
-  display:block;
-  padding:10px;
-  margin:6px 0;
-  border-radius:10px;
-  background:#fff;
-  cursor:pointer;
+    display:block;
+    background:#203b5c;
+    padding:10px;
+    margin:8px 0;
+    border-radius:8px;
+    cursor:pointer;
 }
+
 .option:hover{
-  background:#ffe0ef;
+    background:#00a8cc;
 }
 
-/* BUTTON */
-button{
-  padding:12px 20px;
-  border:none;
-  border-radius:12px;
-  background:#ff4fa3;
-  color:white;
-  font-weight:bold;
-  cursor:pointer;
-  margin:10px;
-  box-shadow:0 0 15px #ff7ab8;
+.correct{
+    color:#00ff88;
+    font-weight:bold;
 }
 
-/* RESULT */
-#result{
-  text-align:center;
-  font-size:22px;
-  margin-top:20px;
-  font-weight:bold;
+.wrong{
+    color:#ff5555;
+    font-weight:bold;
 }
 
-/* HORROR TIMER */
-.warning{
-  animation:flicker 0.5s infinite;
+.explain{
+    background:#091d33;
+    padding:10px;
+    border-radius:8px;
 }
-@keyframes flicker{
-  0%,100%{opacity:1;}
-  50%{opacity:0.3;}
-}
+
 </style>
+
 </head>
+
 <body>
-<div class="container">
-<h1>💖 Matric English MCQs (Complete) 💖</h1>
-<div id="timer">20:00</div>
-<form id="quiz"></form>
-<center>
-<button onclick="submitQuiz()">Submit</button>
-<button onclick="location.reload()">Reset</button>
-</center>
-<div id="result"></div>
+
+<h1>AI Quiz Part 1 (Q1-Q10)</h1>
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q1. What is the best fix when AI mixes details from multiple topics in one long chat?
+</h3>
+
+<p class="urdu">
+اردو: جب AI ایک لمبی چیٹ میں مختلف موضوعات کی معلومات کو ملا دے تو بہترین حل کیا ہے؟
+</p>
+
+
+<div class="words">
+<b>Hard Words:</b><br>
+Context (سیاق و سباق)<br>
+Topic (موضوع)<br>
+Mixing up (گڈمڈ کرنا)<br>
+Conversation (گفتگو)
 </div>
+
+
+<label class="option">
+<input type="radio" name="q1" onclick="check(this,false)">
+Ask AI again in the same chat
+</label>
+
+<label class="option">
+<input type="radio" name="q1" onclick="check(this,false)">
+Paste the whole history again
+</label>
+
+<label class="option">
+<input type="radio" name="q1" onclick="check(this,false)">
+Use a bigger model only
+</label>
+
+<label class="option">
+<input type="radio" name="q1" onclick="check(this,true)">
+Start a fresh conversation for each topic
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Separate chats keep context clean and reduce confusion.<br><br>
+اردو: ہر موضوع کے لیے الگ چیٹ رکھنے سے AI زیادہ درست جواب دیتا ہے۔
+</div>
+
+</div>
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q2. Why is running an untested delete script dangerous?
+</h3>
+
+<p class="urdu">
+اردو: غیر آزمودہ delete script چلانا خطرناک کیوں ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Untested (جس کا تجربہ نہ کیا گیا ہو)<br>
+Delete (ختم کرنا)<br>
+Duplicate (اضافی/ایک جیسی)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q2" onclick="check(this,false)">
+It makes the computer slower
+</label>
+
+<label class="option">
+<input type="radio" name="q2" onclick="check(this,true)">
+It can delete wrong files permanently
+</label>
+
+<label class="option">
+<input type="radio" name="q2" onclick="check(this,false)">
+AI cannot understand images
+</label>
+
+<label class="option">
+<input type="radio" name="q2" onclick="check(this,false)">
+It needs internet connection
+</label>
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Always test scripts on copies first.<br><br>
+اردو: پہلے copy پر test کریں تاکہ اصل data محفوظ رہے۔
+</div>
+
+</div>
+
+
 <script>
 
-const questions = [
+function check(option,correct){
 
-{q:"The teacher teaches us grammar.",options:["teach","teaches","teaching","taught"],answer:"b"},
-{q:"Speaking gently is something",options:["difficult","small","big","impossible"],answer:"b"},
-{q:"Active Voice: My jug has been broken",options:["Someone broke my jug","Someone has broken my jug","They broke","They have broken"],answer:"a"},
-{q:'Indirect: "Do not spit here"',options:["He told them","He forbade them to spit there","He asked","He told"],answer:"b"},
-{q:"Greenery on ____ of river",options:["right","left","bank","both"],answer:"b"},
-{q:"Negative: I have a mobile phone",options:["I have not","I did not have","I does not","I had not"],answer:"b"},
-{q:"Direct narration: Man is mortal",options:["Man was mortal","Man is mortal","Man will be","Man has been"],answer:"b"},
-{q:"Helmet increases chances of",options:["damage","accidents","loss","severe injuries"],answer:"d"},
-{q:"Sun below ___ horizon",options:["the","a","an","none"],answer:"a"},
-{q:"Spider attempt",options:["eight","tenth","ninth","eleventh"],answer:"b"},
-{q:"Father died ___ cancer",options:["from","in","by","of"],answer:"d"},
-{q:"Social media cause",options:["BP","obesity","attack","none"],answer:"b"},
-{q:"We ___ her yesterday",options:["see","saw","seen","had seen"],answer:"b"},
-{q:"Indirect: Let us go",options:["should","advised","proposed","requested"],answer:"c"},
-{q:"Developed countries ___ dignity",options:["plan","request","understand","explain"],answer:"c"},
-{q:"Antonym of Attack",options:["Defense","Defeat","Defend","Descend"],answer:"a"},
-{q:"Correct punctuation",options:["Iqbal died Lahore","Iqbal, the famous poet of Pakistan, died at Lahore","Iqbal died at Lahore","Iqbal died,"],answer:"b"},
-{q:"Negative: They drink tea",options:["do not drink","did not","have not","will not"],answer:"a"},
-{q:"Main idea",options:["children","young","all people","old"],answer:"c"},
-{q:"Passive: I gave him a book",options:["given","He was given","He has given","book given"],answer:"b"},
-{q:"Active: novel was not read",options:["They did not read","They do not","They reading","They have not"],answer:"a"},
-{q:"Both riders and ___ riders",options:["companion","passenger","pillion","traveller"],answer:"c"},
-{q:"Direct narration: He had done his work",options:["I have done my work","I have done your work","He had done","He has done"],answer:"a"},
-{q:"House was ___",options:["closed","haunted","sealed","none"],answer:"b"},
-{q:"Interrogative: She plays football",options:["Did she play","Does she plays","Will she","Does she play"],answer:"d"},
-{q:"Fake virtual ___",options:["companies","offices","machines","none"],answer:"a"},
-{q:"Gain first hand ___",options:["information","knowledge","report","detail"],answer:"b"},
-{q:"He did as he ___",options:["promise","promises","promised","will"],answer:"c"},
-{q:"What clever boy he is!",options:["a","an","the","none"],answer:"a"},
-{q:"The dog sat ___ his master",options:["beside","besides","with","none"],answer:"a"}
+let box = option.closest(".quiz");
+let result = box.querySelector(".result");
 
-];
+if(correct){
+result.innerHTML="✅ Correct Answer (صحیح جواب)";
+result.className="result correct";
+}
+else{
+result.innerHTML="❌ Wrong Answer (غلط جواب)";
+result.className="result wrong";
+}
 
-/* LOAD */
-const quiz=document.getElementById("quiz");
-
-questions.forEach((q,i)=>{
-let div=document.createElement("div");
-div.className="card";
-
-div.innerHTML=`
-<p>${i+1}. ${q.q}</p>
-${q.options.map((opt,j)=>
-`<label class="option">
-<input type="radio" name="q${i}" value="${String.fromCharCode(97+j)}"> ${opt}
-</label>`).join("")}
-`;
-
-quiz.appendChild(div);
-});
-
-/* TIMER */
-
-let interval = setInterval(()=>{
-  let m=Math.floor(time/60);
-  let s=time%60;
-  timer.innerText=`${m}:${s<10?"0"+s:s}`;
-
-  if(time<60) timer.classList.add("warning");
-
-  if(time <= 0){
-    clearInterval(interval);
-    submitQuiz(); // auto submit
-  }
-
-  time--;
-},1000);
-
-/* RESULT */
-function submitQuiz() {
-  let score = 0;
-
-  questions.forEach((q, i) => {
-
-    let options = document.getElementsByName("q" + i);
-    let selected = null;
-
-    // find selected
-    for (let j = 0; j < options.length; j++) {
-      if (options[j].checked) {
-        selected = options[j].value;
-      }
-    }
-
-    // highlight
-    for (let j = 0; j < options.length; j++) {
-      let opt = options[j];
-      let label = opt.parentElement;
-      let optionLetter = String.fromCharCode(97 + j);
-
-      label.style.background = "#fff";
-      label.style.border = "1px solid #ccc";
-
-      // correct
-      if (optionLetter === q.answer) {
-        label.style.background = "#c8f7c5";
-        label.style.border = "2px solid green";
-      }
-
-      // wrong
-      if (selected !== null && selected !== q.answer && opt.checked) {
-        label.style.background = "#f7c5c5";
-        label.style.border = "2px solid red";
-      }
-    }
-
-    // show correct answer
-    let card = options[0].closest(".card");
-
-    let old = card.querySelector(".correctAns");
-    if (old) old.remove();
-
-    let ansText = document.createElement("div");
-    ansText.className = "correctAns";
-    ansText.style.marginTop = "8px";
-    ansText.style.fontWeight = "bold";
-
-    ansText.innerHTML = "✔ Correct Answer: " + 
-      q.options[q.answer.charCodeAt(0) - 97];
-
-    card.appendChild(ansText);
-
-    // score
-    if (selected === q.answer) {
-      score++;
-    }
-
-  });
-
-  document.getElementById("result").innerText =
-    "🎯 Your Score: " + score + " / " + questions.length;
 }
 
 </script>
+
+</body>
+</html>
+<!-- ================= PART 2 : Q3-Q5 ================= -->
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q3. A lawyer asks AI to check a policy mentioned in a phone call but never uploaded. What should happen?
+</h3>
+
+<p class="urdu">
+اردو: ایک وکیل AI سے ایسی policy چیک کروانا چاہتا ہے جس کا ذکر فون کال میں ہوا لیکن document upload نہیں کیا گیا۔ کیا کرنا چاہیے؟
+</p>
+
+
+<div class="words">
+<b>Hard Words:</b><br>
+Lawyer (وکیل)<br>
+Policy (پالیسی / اصول)<br>
+Uploaded (فائل کو سسٹم میں شامل کرنا)<br>
+Document (دستاویز)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q3" onclick="check(this,false)">
+AI automatically remembers the phone call
+</label>
+
+<label class="option">
+<input type="radio" name="q3" onclick="check(this,true)">
+Provide the actual document because AI cannot check unseen information
+</label>
+
+<label class="option">
+<input type="radio" name="q3" onclick="check(this,false)">
+AI should create a new policy
+</label>
+
+<label class="option">
+<input type="radio" name="q3" onclick="check(this,false)">
+Trust AI confidence
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: AI needs the actual information. It cannot verify a document it has not received.<br><br>
+
+اردو: AI کو اصل document چاہیے ہوتا ہے۔ جس چیز تک رسائی نہ ہو، اسے خود سے معلوم نہیں کر سکتا۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q4. AI gives one number from a spreadsheet without showing code. What is the safest verification step?
+</h3>
+
+<p class="urdu">
+اردو: AI spreadsheet سے ایک نمبر دیتا ہے لیکن code نہیں دکھاتا۔ سب سے محفوظ verification کیا ہے؟
+</p>
+
+
+<div class="words">
+<b>Hard Words:</b><br>
+Spreadsheet (جدول والی فائل)<br>
+Verification (تصدیق / جانچ)<br>
+Code (پروگرام کی ہدایات)<br>
+Exact (بالکل درست)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q4" onclick="check(this,false)">
+Trust the number because AI calculated it
+</label>
+
+<label class="option">
+<input type="radio" name="q4" onclick="check(this,true)">
+Ask AI to write and run code, then show the exact count
+</label>
+
+<label class="option">
+<input type="radio" name="q4" onclick="check(this,false)">
+Upload the file again
+</label>
+
+<label class="option">
+<input type="radio" name="q4" onclick="check(this,false)">
+Use a longer prompt
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Code shows how the answer was calculated and makes checking easier.<br><br>
+
+اردو: Code سے پتا چلتا ہے کہ حساب کیسے ہوا، اس لیے نتیجہ verify کرنا آسان ہوتا ہے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q5. Why should a campaign brief saved for another AI use Markdown instead of HTML?
+</h3>
+
+<p class="urdu">
+اردو: اگلے AI کے لیے محفوظ کیے گئے campaign brief میں Markdown بہتر کیوں ہے؟
+</p>
+
+
+<div class="words">
+<b>Hard Words:</b><br>
+Campaign (مہم)<br>
+Brief (مختصر ہدایات)<br>
+Markdown (سادہ text formatting)<br>
+Structure (ترتیب)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q5" onclick="check(this,false)">
+HTML always helps AI understand better
+</label>
+
+<label class="option">
+<input type="radio" name="q5" onclick="check(this,true)">
+Markdown keeps the structure compact and easy for AI to parse
+</label>
+
+<label class="option">
+<input type="radio" name="q5" onclick="check(this,false)">
+Images are easier for AI than text
+</label>
+
+<label class="option">
+<input type="radio" name="q5" onclick="check(this,false)">
+Video stores more information
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Markdown gives structure without unnecessary extra markup.<br><br>
+
+اردو: Markdown صاف اور آسان structure دیتا ہے جبکہ HTML میں اضافی code شامل ہو جاتا ہے۔
+</div>
+
+</div>
+<!-- ================= PART 3 : Q6-Q10 ================= -->
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q6. A logistics team trusts AI on simple address formatting because it succeeded on a hard routing task. What is the problem?
+</h3>
+
+<p class="urdu">
+اردو: ایک logistics ٹیم AI پر آسان address formatting کے لیے بھروسہ کرتی ہے کیونکہ AI نے مشکل routing task کامیابی سے کیا تھا۔ مسئلہ کیا ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Logistics (سامان کی ترسیل کا نظام)<br>
+Formatting (ترتیب دینا / درست شکل دینا)<br>
+Routing (راستہ طے کرنا)<br>
+Ability (صلاحیت)<br>
+Jagged (غیر یکساں / ہر کام میں برابر نہیں)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q6" onclick="check(this,false)">
+AI ability is always the same for every task
+</label>
+
+<label class="option">
+<input type="radio" name="q6" onclick="check(this,true)">
+AI ability is jagged, so success on one task does not guarantee another
+</label>
+
+<label class="option">
+<input type="radio" name="q6" onclick="check(this,false)">
+Hard tasks always prove easy tasks
+</label>
+
+<label class="option">
+<input type="radio" name="q6" onclick="check(this,false)">
+AI only fails on long tasks
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: AI performance changes from task to task. Being good at one thing does not mean it is good at everything.<br><br>
+
+اردو: AI کی صلاحیت ہر کام میں ایک جیسی نہیں ہوتی۔ ایک مشکل کام اچھا کرنے کا مطلب یہ نہیں کہ ہر کام درست کرے گا۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q7. What separates an AI Worker from a normal AI assistant?
+</h3>
+
+<p class="urdu">
+اردو: AI Worker اور عام AI assistant میں بنیادی فرق کیا ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Workflow (کام کا مسلسل طریقہ)<br>
+Continuously (مسلسل)<br>
+Sign-off (منظوری دینا)<br>
+Assistant (مددگار)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q7" onclick="check(this,false)">
+It only has a bigger knowledge base
+</label>
+
+<label class="option">
+<input type="radio" name="q7" onclick="check(this,false)">
+It only answers harder questions
+</label>
+
+<label class="option">
+<input type="radio" name="q7" onclick="check(this,true)">
+It runs a whole workflow continuously under human approval
+</label>
+
+<label class="option">
+<input type="radio" name="q7" onclick="check(this,false)">
+It needs no human checking
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: An AI Worker performs a workflow with tools and approval, not just one reply.<br><br>
+
+اردو: AI Worker صرف جواب نہیں دیتا بلکہ مکمل کام کا سلسلہ چلاتا ہے اور انسان کی منظوری شامل ہوتی ہے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q8. Why can AI miscount letters in a word?
+</h3>
+
+<p class="urdu">
+اردو: AI کسی لفظ کے حروف گننے میں غلطی کیوں کر سکتا ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Miscount (غلط گنتی کرنا)<br>
+Chunks (حصے)<br>
+Individual (الگ الگ)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q8" onclick="check(this,true)">
+It reads text as chunks, not individual letters
+</label>
+
+<label class="option">
+<input type="radio" name="q8" onclick="check(this,false)">
+It becomes tired
+</label>
+
+<label class="option">
+<input type="radio" name="q8" onclick="check(this,false)">
+It only fails on rare words
+</label>
+
+<label class="option">
+<input type="radio" name="q8" onclick="check(this,false)">
+It needs spaces between letters
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: AI processes patterns and tokens, not always individual letters like humans.<br><br>
+
+اردو: AI text کو حصوں (chunks) میں سمجھتا ہے، ہر حرف کو الگ الگ نہیں دیکھتا۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q9. What does context window and context rot relationship show?
+</h3>
+
+<p class="urdu">
+اردو: Context window اور context rot کا تعلق کیا بتاتا ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Context Window (وہ جگہ جہاں AI موجودہ معلومات رکھتا ہے)<br>
+Context Rot (پرانا context کم یاد رہ جانا)<br>
+Bury (دب جانا)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q9" onclick="check(this,false)">
+Context window has no effect
+</label>
+
+<label class="option">
+<input type="radio" name="q9" onclick="check(this,true)">
+Long mixed chats bury early information until it fades
+</label>
+
+<label class="option">
+<input type="radio" name="q9" onclick="check(this,false)">
+Context rot increases memory
+</label>
+
+<label class="option">
+<input type="radio" name="q9" onclick="check(this,false)">
+Large windows always create errors
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Very long chats can make earlier details less available.<br><br>
+
+اردو: لمبی چیٹ میں پرانی معلومات پیچھے چلی جاتی ہیں اور AI انہیں کم استعمال کر پاتا ہے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q10. What should happen before building from a detailed specification?
+</h3>
+
+<p class="urdu">
+اردو: تفصیلی specification سے build شروع کرنے سے پہلے کیا کرنا چاہیے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Specification (تفصیلی ہدایات)<br>
+Ambiguity (ابہام / غیر واضح بات)<br>
+Evaluate (جانچ کرنا)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q10" onclick="check(this,false)">
+Start building immediately
+</label>
+
+<label class="option">
+<input type="radio" name="q10" onclick="check(this,false)">
+Add unlimited requirements
+</label>
+
+<label class="option">
+<input type="radio" name="q10" onclick="check(this,true)">
+Ask AI to find ambiguities and grade the spec before building
+</label>
+
+<label class="option">
+<input type="radio" name="q10" onclick="check(this,false)">
+Split the spec into many chats
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Reviewing a plan before building prevents mistakes later.<br><br>
+
+اردو: کام شروع کرنے سے پہلے specification کو چیک کرنے سے بعد میں ہونے والی غلطیاں کم ہو جاتی ہیں۔
+</div>
+
+</div>
+<!-- ================= PART 4 : Q11-Q15 ================= -->
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q11. A journalist asks AI with web search. What is the PRIMARY weakness of trusting the web-search figure as-is?
+</h3>
+
+<p class="urdu">
+اردو: ایک صحافی AI سے web search کے ذریعے معلومات لیتا ہے۔ Web سے ملنے والے figure پر فوراً اعتماد کرنے کی بنیادی کمزوری کیا ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Journalist (صحافی)<br>
+Web Search (انٹرنیٹ پر تلاش)<br>
+Figure (اعداد و شمار / نمبر)<br>
+Stale (پرانی یا outdated معلومات)<br>
+Condensed (مختصر کیا ہوا)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q11" onclick="check(this,false)">
+The link may load slowly
+</label>
+
+<label class="option">
+<input type="radio" name="q11" onclick="check(this,false)">
+Web search is slower than memory
+</label>
+
+<label class="option">
+<input type="radio" name="q11" onclick="check(this,true)">
+Web search may use popular or outdated pages, so the figure can be wrong
+</label>
+
+<label class="option">
+<input type="radio" name="q11" onclick="check(this,false)">
+Deep research is always perfect
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Search results can contain old or unreliable information. Always verify important facts.<br><br>
+
+اردو: Internet search کی معلومات ہمیشہ درست نہیں ہوتیں۔ اہم معلومات کو دوبارہ verify کرنا چاہیے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q12. A researcher gets a script that summarizes survey responses. What verification step should she never skip?
+</h3>
+
+<p class="urdu">
+اردو: ایک researcher کو survey data summarize کرنے والی script ملتی ہے۔ کون سا verification step لازمی ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Researcher (محقق)<br>
+Script (کوڈ / پروگرام)<br>
+Summarize (خلاصہ بنانا)<br>
+Verification (تصدیق / جانچ)<br>
+Category (قسم)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q12" onclick="check(this,false)">
+Ask AI to confirm its own code
+</label>
+
+<label class="option">
+<input type="radio" name="q12" onclick="check(this,false)">
+Read every line of code only
+</label>
+
+<label class="option">
+<input type="radio" name="q12" onclick="check(this,false)">
+Run the script many times
+</label>
+
+<label class="option">
+<input type="radio" name="q12" onclick="check(this,true)">
+Test it on a small sample with known results
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: A small known test reveals mistakes before using the full data.<br><br>
+
+اردو: پہلے چھوٹے ایسے data پر test کریں جس کا جواب آپ کو پہلے سے معلوم ہو۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q13. What relationship between a Connector and a Skill does this show?
+</h3>
+
+<p class="urdu">
+اردو: Connector اور Skill کے درمیان کیا تعلق ظاہر ہوتا ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Connector (ڈیٹا یا app سے رابطہ کرنے والا ذریعہ)<br>
+Skill (کام کرنے کا طریقہ / مخصوص ہنر)<br>
+Booking System (بکنگ کا نظام)<br>
+Follow-up (بعد کا عمل)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q13" onclick="check(this,true)">
+Connector pulls real data while Skill shapes the workflow
+</label>
+
+<label class="option">
+<input type="radio" name="q13" onclick="check(this,false)">
+Both do exactly the same job
+</label>
+
+<label class="option">
+<input type="radio" name="q13" onclick="check(this,false)">
+Skill pulls data and Connector formats it
+</label>
+
+<label class="option">
+<input type="radio" name="q13" onclick="check(this,false)">
+Skill makes Connector unnecessary
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Connector brings information; Skill controls how the work is done.<br><br>
+
+اردو: Connector معلومات لاتا ہے، جبکہ Skill کام کرنے کا طریقہ طے کرتا ہے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q14. A teacher writes a long paragraph and the plan misses a constraint. What is the reason?
+</h3>
+
+<p class="urdu">
+اردو: ایک استاد لمبا paragraph لکھتا ہے اور AI ایک اہم شرط miss کر دیتا ہے۔ وجہ کیا ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Constraint (شرط / پابندی)<br>
+Paragraph (پیراگراف)<br>
+Preference (پسند)<br>
+Heading (عنوان)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q14" onclick="check(this,false)">
+AI dislikes long paragraphs
+</label>
+
+<label class="option">
+<input type="radio" name="q14" onclick="check(this,false)">
+The constraint was too polite
+</label>
+
+<label class="option">
+<input type="radio" name="q14" onclick="check(this,true)">
+The rule was hidden in text instead of being clearly separated
+</label>
+
+<label class="option">
+<input type="radio" name="q14" onclick="check(this,false)">
+Repeat the rule many times
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Important rules should be clearly separated from normal information.<br><br>
+
+اردو: ضروری rules کو الگ heading یا bullet میں لکھنا بہتر ہوتا ہے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q15. A scholarship committee wants AI to pick top applicants. What should code and humans each do?
+</h3>
+
+<p class="urdu">
+اردو: Scholarship committee AI سے بہترین applicants منتخب کروانا چاہتی ہے۔ Code اور انسان کا کردار کیا ہونا چاہیے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Scholarship (تعلیمی وظیفہ)<br>
+Applicant (درخواست دینے والا)<br>
+Criteria (معیار)<br>
+Weight (اہمیت / وزن)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q15" onclick="check(this,false)">
+Let code make the final decision
+</label>
+
+<label class="option">
+<input type="radio" name="q15" onclick="check(this,false)">
+Let code invent the criteria
+</label>
+
+<label class="option">
+<input type="radio" name="q15" onclick="check(this,true)">
+Code calculates scores; humans decide qualities and weights
+</label>
+
+<label class="option">
+<input type="radio" name="q15" onclick="check(this,false)">
+Skip code completely
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Code can calculate, but humans decide values and judgments.<br><br>
+
+اردو: Code حساب کر سکتا ہے، لیکن اہم فیصلے انسان کو کرنے چاہئیں۔
+</div>
+
+</div>
+<!-- ================= PART 5 : Q16-Q20 ================= -->
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q16. A nurse notices AI wrote a fluent summary with the wrong dosage. What happened?
+</h3>
+
+<p class="urdu">
+اردو: ایک نرس دیکھتی ہے کہ AI نے خوبصورت انداز میں summary لکھی لیکن dosage غلط تھا۔ اصل مسئلہ کیا ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Nurse (نرس)<br>
+Fluent (روانی سے لکھا ہوا)<br>
+Summary (خلاصہ)<br>
+Dosage (دوا کی مقدار)<br>
+Truth (حقیقت)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q16" onclick="check(this,false)">
+The model will always self-correct
+</label>
+
+<label class="option">
+<input type="radio" name="q16" onclick="check(this,true)">
+The model creates fluent text but does not check if it is true
+</label>
+
+<label class="option">
+<input type="radio" name="q16" onclick="check(this,false)">
+The model only needs more data
+</label>
+
+<label class="option">
+<input type="radio" name="q16" onclick="check(this,false)">
+The typo caused the mistake
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: AI can sound confident while being wrong because it predicts text, not truth.<br><br>
+
+اردو: AI اچھا لکھ سکتا ہے لیکن ہر بات کی حقیقت خود verify نہیں کرتا، اس لیے غلطی ہو سکتی ہے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q17. A marketer pastes raw HTML into LinkedIn and sees tags instead of styling. What is the weakness?
+</h3>
+
+<p class="urdu">
+اردو: ایک marketer LinkedIn پر raw HTML paste کرتا ہے اور tags نظر آتے ہیں۔ مسئلہ کیا ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Raw (سادہ / بغیر process کیا ہوا)<br>
+HTML (ویب صفحہ بنانے کی زبان)<br>
+Tags (HTML کے commands)<br>
+Styling (خوبصورتی / design)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q17" onclick="check(this,false)">
+The post is too long
+</label>
+
+<label class="option">
+<input type="radio" name="q17" onclick="check(this,true)">
+The platform shows HTML as text instead of applying formatting
+</label>
+
+<label class="option">
+<input type="radio" name="q17" onclick="check(this,false)">
+HTML makes AI slower
+</label>
+
+<label class="option">
+<input type="radio" name="q17" onclick="check(this,false)">
+Markdown cannot work online
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Social platforms usually do not render raw HTML code.<br><br>
+
+اردو: LinkedIn جیسے platforms HTML code کو design نہیں بناتے بلکہ text کی طرح دکھا دیتے ہیں۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q18. Why should a spec be graded before building?
+</h3>
+
+<p class="urdu">
+اردو: Build شروع کرنے سے پہلے specification کو grade کیوں کرنا چاہیے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Spec (تفصیلی منصوبہ / ہدایات)<br>
+Grade (درجہ دینا / جانچ کرنا)<br>
+Leverage (زیادہ فائدہ)<br>
+Upstream (شروع کے مرحلے میں)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q18" onclick="check(this,false)">
+Final wording is the only important thing
+</label>
+
+<label class="option">
+<input type="radio" name="q18" onclick="check(this,true)">
+Fixing the spec early improves everything built later
+</label>
+
+<label class="option">
+<input type="radio" name="q18" onclick="check(this,false)">
+Planning is unnecessary
+</label>
+
+<label class="option">
+<input type="radio" name="q18" onclick="check(this,false)">
+A longer document is always better
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Early improvements have a bigger effect on the final result.<br><br>
+
+اردو: اگر شروع کا منصوبہ اچھا ہو تو بعد کا پورا کام بہتر ہو جاتا ہے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q19. A Skill for newsletter subject lines never activates. What is the likely cause?
+</h3>
+
+<p class="urdu">
+اردو: Newsletter subject lines کے لیے بنائی گئی Skill activate نہیں ہوتی۔ ممکنہ وجہ کیا ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Skill (خاص کام کرنے کی ہدایت)<br>
+Newsletter (خبری ای میل)<br>
+Description (تفصیل)<br>
+Activate (فعال ہونا)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q19" onclick="check(this,false)">
+The instructions are too long
+</label>
+
+<label class="option">
+<input type="radio" name="q19" onclick="check(this,true)">
+The description does not match the user's wording
+</label>
+
+<label class="option">
+<input type="radio" name="q19" onclick="check(this,false)">
+Skills always need commands
+</label>
+
+<label class="option">
+<input type="radio" name="q19" onclick="check(this,false)">
+A Connector is required
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Skills activate based on matching descriptions.<br><br>
+
+اردو: Skill چلنے کے لیے اس کی description کا user کے الفاظ سے match ہونا ضروری ہے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q20. What is the best fix for a long AI chat containing many unrelated topics?
+</h3>
+
+<p class="urdu">
+اردو: ایک لمبی AI chat میں کئی مختلف موضوعات ہوں تو بہترین حل کیا ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Unrelated (غیر متعلق)<br>
+Fresh Conversation (نئی گفتگو)<br>
+Working Memory (کام کرنے والی یادداشت)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q20" onclick="check(this,false)">
+Continue the same chat forever
+</label>
+
+<label class="option">
+<input type="radio" name="q20" onclick="check(this,false)">
+Paste the whole history again
+</label>
+
+<label class="option">
+<input type="radio" name="q20" onclick="check(this,false)">
+Use a longer prompt only
+</label>
+
+<label class="option">
+<input type="radio" name="q20" onclick="check(this,true)">
+Start a fresh conversation for each topic
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Separate conversations keep important context cleaner.<br><br>
+
+اردو: مختلف موضوعات کے لیے الگ چیٹ رکھنے سے AI بہتر focus کر پاتا ہے۔
+</div>
+
+</div>
+<!-- ================= PART 6 : Q21-Q25 ================= -->
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q21. A consultant needs a report that a client can edit and add tracked comments before signing off. Which format fits best?
+</h3>
+
+<p class="urdu">
+اردو: ایک consultant کو ایسی report بھیجنی ہے جس میں client edits اور comments شامل کر سکے۔ کون سا format بہتر ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Consultant (مشیر)<br>
+Tracked Comments (ریکارڈ کیے گئے تبصرے)<br>
+Edit (تبدیلی کرنا)<br>
+Sign-off (حتمی منظوری دینا)<br>
+Format (فائل کی قسم)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q21" onclick="check(this,false)">
+PDF, because it prevents layout changes
+</label>
+
+<label class="option">
+<input type="radio" name="q21" onclick="check(this,false)">
+HTML, because browsers open it easily
+</label>
+
+<label class="option">
+<input type="radio" name="q21" onclick="check(this,false)">
+CSV, because rows are structured
+</label>
+
+<label class="option">
+<input type="radio" name="q21" onclick="check(this,true)">
+DOCX, because the client needs editing and Track Changes
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: DOCX is best for documents that need comments and editing.<br><br>
+
+اردو: DOCX میں comments اور changes آسانی سے کیے جا سکتے ہیں، اس لیے یہ بہتر ہے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q22. AI gives a confident but wrong historical date. What does confidence actually tell us?
+</h3>
+
+<p class="urdu">
+اردو: AI غلط تاریخی تاریخ بھی پورے اعتماد سے بتاتا ہے۔ Confidence ہمیں کیا بتاتا ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Confident (پراعتماد)<br>
+Historical (تاریخی)<br>
+Accuracy (درستگی)<br>
+Truth (حقیقت)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q22" onclick="check(this,false)">
+The model verified the information
+</label>
+
+<label class="option">
+<input type="radio" name="q22" onclick="check(this,false)">
+The model is always certain
+</label>
+
+<label class="option">
+<input type="radio" name="q22" onclick="check(this,true)">
+Confidence is a style, not a guarantee of truth
+</label>
+
+<label class="option">
+<input type="radio" name="q22" onclick="check(this,false)">
+Confident answers are always correct
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: AI tone does not prove the answer is true.<br><br>
+
+اردو: AI کا اعتماد والا انداز یہ ثابت نہیں کرتا کہ جواب لازمی صحیح ہے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q23. HR brief puts a salary limit inside a paragraph and AI ignores it. What is the weakness?
+</h3>
+
+<p class="urdu">
+اردو: HR نے salary limit ایک لمبے paragraph میں لکھی لیکن AI نے نظر انداز کر دی۔ مسئلہ کیا ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+HR (Human Resources / انسانی وسائل)<br>
+Salary Band (تنخواہ کی حد)<br>
+Constraint (ضروری شرط)<br>
+Preference (پسند)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q23" onclick="check(this,false)">
+AI cannot understand numbers
+</label>
+
+<label class="option">
+<input type="radio" name="q23" onclick="check(this,true)">
+The rule was hidden in text instead of being clearly separated
+</label>
+
+<label class="option">
+<input type="radio" name="q23" onclick="check(this,false)">
+Salary should not be mentioned
+</label>
+
+<label class="option">
+<input type="radio" name="q23" onclick="check(this,false)">
+HTML was required
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Important rules should be written clearly and separately.<br><br>
+
+اردو: اہم شرطوں کو الگ headings یا bullets میں لکھنا بہتر ہوتا ہے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q24. A teacher creates an AI grade averaging tool. What role should she take?
+</h3>
+
+<p class="urdu">
+اردو: ایک teacher AI سے grades calculate کرنے والا tool بنواتی ہے۔ اسے کیا کردار ادا کرنا چاہیے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Average (اوسط)<br>
+Tool (آلہ / پروگرام)<br>
+Verify (تصدیق کرنا)<br>
+Client (صارف / کام دینے والا)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q24" onclick="check(this,false)">
+Audit every line of code herself
+</label>
+
+<label class="option">
+<input type="radio" name="q24" onclick="check(this,true)">
+Act as the client: give a clear brief and verify results
+</label>
+
+<label class="option">
+<input type="radio" name="q24" onclick="check(this,false)">
+Let AI decide everything
+</label>
+
+<label class="option">
+<input type="radio" name="q24" onclick="check(this,false)">
+Force one programming language
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Users should define requirements and check results.<br><br>
+
+اردو: انسان کو مقصد اور rules بتانے چاہئیں اور نتیجہ verify کرنا چاہیے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q25. Support lead pastes a customer error message and AI follows instructions inside it. What should she do?
+</h3>
+
+<p class="urdu">
+اردو: Support lead نے customer کا error message paste کیا لیکن AI اس کے اندر موجود instructions follow کرنے لگا۔ کیا کرنا چاہیے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Support Lead (مدد کرنے والی ٹیم کا سربراہ)<br>
+Error Message (غلطی کا پیغام)<br>
+Instruction (ہدایت)<br>
+Code Fence (code block)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q25" onclick="check(this,true)">
+Wrap the message inside a code fence so AI treats it as data
+</label>
+
+<label class="option">
+<input type="radio" name="q25" onclick="check(this,false)">
+Delete all command words
+</label>
+
+<label class="option">
+<input type="radio" name="q25" onclick="check(this,false)">
+Make the message shorter
+</label>
+
+<label class="option">
+<input type="radio" name="q25" onclick="check(this,false)">
+Ask AI politely to ignore it
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Code fences tell AI that the content is data, not instructions.<br><br>
+
+اردو: Code block استعمال کرنے سے AI سمجھتا ہے کہ یہ صرف معلومات ہیں، حکم نہیں۔
+</div>
+
+</div>
+<!-- ================= PART 7 : Q26-Q30 ================= -->
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q26. A consultant spends time polishing a flawed proposal. What lesson does this show?
+</h3>
+
+<p class="urdu">
+اردو: ایک consultant ایک خراب proposal کو خوبصورت بنانے میں وقت لگاتا ہے، لیکن اصل outline غلط تھی۔ اس سے کیا سبق ملتا ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Consultant (مشیر)<br>
+Polishing (بہتر بنانا / سجانا)<br>
+Flawed (غلطی والا)<br>
+Proposal (تجویز / منصوبہ)<br>
+Outline (ابتدائی خاکہ)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q26" onclick="check(this,false)">
+Final wording is always the most important
+</label>
+
+<label class="option">
+<input type="radio" name="q26" onclick="check(this,true)">
+Fixing the outline early improves everything built afterward
+</label>
+
+<label class="option">
+<input type="radio" name="q26" onclick="check(this,false)">
+Planning is unnecessary
+</label>
+
+<label class="option">
+<input type="radio" name="q26" onclick="check(this,false)">
+Longer drafts are always better
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Good planning at the start improves the final result.<br><br>
+
+اردو: شروع کا خاکہ درست ہو تو بعد کا پورا کام بہتر ہو جاتا ہے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q27. Why is custom currency conversion code unnecessary?
+</h3>
+
+<p class="urdu">
+اردو: Currency conversion کے لیے اپنا code بنانا ضروری کیوں نہیں ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Custom (خاص طور پر بنایا ہوا)<br>
+Currency (کرنسی / رقم)<br>
+Conversion (تبدیلی)<br>
+Universal (عام / سب کے لیے)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q27" onclick="check(this,false)">
+Currency math is impossible
+</label>
+
+<label class="option">
+<input type="radio" name="q27" onclick="check(this,false)">
+Custom code is always better
+</label>
+
+<label class="option">
+<input type="radio" name="q27" onclick="check(this,false)">
+Exchange rates never change
+</label>
+
+<label class="option">
+<input type="radio" name="q27" onclick="check(this,true)">
+The rule is public and existing finance apps already solve it
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Do not build custom tools when reliable public tools already exist.<br><br>
+
+اردو: جب تیار اور قابل اعتماد app موجود ہو تو غیر ضروری code نہیں بنانا چاہیے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q28. What makes a thermostat AI assistant an agent?
+</h3>
+
+<p class="urdu">
+اردو: Thermostat AI assistant کو agent کیا بناتا ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Thermostat (درجہ حرارت کنٹرول کرنے والا آلہ)<br>
+Agent (خودکار کام کرنے والا نظام)<br>
+Predict (اندازہ لگانا)<br>
+Act (عمل کرنا)<br>
+Observe (مشاہدہ کرنا)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q28" onclick="check(this,false)">
+It has human-like understanding
+</label>
+
+<label class="option">
+<input type="radio" name="q28" onclick="check(this,false)">
+It stores unlimited memory
+</label>
+
+<label class="option">
+<input type="radio" name="q28" onclick="check(this,true)">
+It repeats predict, act, observe loop with tools until goal is reached
+</label>
+
+<label class="option">
+<input type="radio" name="q28" onclick="check(this,false)">
+It works faster than humans
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Agents achieve goals by observing, acting, and adjusting.<br><br>
+
+اردو: Agent بار بار صورتحال دیکھتا ہے، action لیتا ہے، اور مقصد حاصل کرنے کی کوشش کرتا ہے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q29. Why should reasoning mode not stay on for simple facts?
+</h3>
+
+<p class="urdu">
+اردو: آسان معلومات کے لیے reasoning mode ہمیشہ آن کیوں نہیں رکھنا چاہیے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Reasoning (سوچنے کا عمل)<br>
+Simple Facts (آسان معلومات)<br>
+Budget (خرچ / لاگت)<br>
+Value (فائدہ)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q29" onclick="check(this,false)">
+It makes AI incorrect
+</label>
+
+<label class="option">
+<input type="radio" name="q29" onclick="check(this,true)">
+It wastes time and budget without adding value
+</label>
+
+<label class="option">
+<input type="radio" name="q29" onclick="check(this,false)">
+It removes accuracy
+</label>
+
+<label class="option">
+<input type="radio" name="q29" onclick="check(this,false)">
+It disables memory
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Simple questions do not need extra reasoning steps.<br><br>
+
+اردو: چھوٹے سوالات کے لیے زیادہ reasoning وقت اور خرچ ضائع کر سکتی ہے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q30. Why does reasoning mode improve difficult math answers?
+</h3>
+
+<p class="urdu">
+اردو: مشکل math سوالات میں reasoning mode جواب بہتر کیوں بناتا ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Intermediate (درمیانی)<br>
+Prediction (اندازہ)<br>
+Accurate (درست)<br>
+Final Answer (حتمی جواب)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q30" onclick="check(this,false)">
+AI gains real mathematical understanding
+</label>
+
+<label class="option">
+<input type="radio" name="q30" onclick="check(this,true)">
+It predicts intermediate working first, making final prediction better
+</label>
+
+<label class="option">
+<input type="radio" name="q30" onclick="check(this,false)">
+It copies verified solutions
+</label>
+
+<label class="option">
+<input type="radio" name="q30" onclick="check(this,false)">
+It uses a built-in truth checker
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Reasoning helps by producing intermediate steps before the answer.<br><br>
+
+اردو: Reasoning mode پہلے درمیانی steps بناتا ہے، جس سے آخری جواب بہتر ہو سکتا ہے۔
+</div>
+
+</div>
+<!-- ================= PART 8 : Q31-Q35 ================= -->
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q31. Why should AI documents stay compact Markdown when reused?
+</h3>
+
+<p class="urdu">
+اردو: جب AI کے لیے document دوبارہ استعمال کرنا ہو تو compact Markdown بہتر کیوں ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Compact (مختصر اور صاف)<br>
+Markdown (سادہ text formatting)<br>
+Context Window (AI کی موجودہ معلومات رکھنے کی جگہ)<br>
+Reuse (دوبارہ استعمال کرنا)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q31" onclick="check(this,false)">
+HTML always improves AI reading
+</label>
+
+<label class="option">
+<input type="radio" name="q31" onclick="check(this,false)">
+Context window does not matter
+</label>
+
+<label class="option">
+<input type="radio" name="q31" onclick="check(this,false)">
+Saving teaches AI permanently
+</label>
+
+<label class="option">
+<input type="radio" name="q31" onclick="check(this,true)">
+Because it re-enters the context window later, it should stay compact Markdown
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Simple structured text is easier for AI to process later.<br><br>
+
+اردو: AI کے لیے دوبارہ استعمال ہونے والی معلومات کو مختصر اور صاف رکھنا بہتر ہوتا ہے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q32. What precaution is needed before reorganizing 4000 photos with AI?
+</h3>
+
+<p class="urdu">
+اردو: AI سے 4000 تصاویر کو organize کرنے سے پہلے کون سی احتیاط ضروری ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Precaution (احتیاط)<br>
+Reorganize (دوبارہ ترتیب دینا)<br>
+Library (فائلوں کا مجموعہ)<br>
+Dry Run (اصل کام سے پہلے آزمائشی چلانا)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q32" onclick="check(this,false)">
+Run on the full library immediately
+</label>
+
+<label class="option">
+<input type="radio" name="q32" onclick="check(this,true)">
+Work on a copy first and require a dry run
+</label>
+
+<label class="option">
+<input type="radio" name="q32" onclick="check(this,false)">
+Trust the script immediately
+</label>
+
+<label class="option">
+<input type="radio" name="q32" onclick="check(this,false)">
+Use a faster model
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Test automation safely before changing important files.<br><br>
+
+اردو: اصل فائلوں پر کام کرنے سے پہلے copy پر test کرنا چاہیے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q33. AI describes a sales trend without code. What is the weakness?
+</h3>
+
+<p class="urdu">
+اردو: AI نے sales trend بتایا لیکن code نہیں دکھایا۔ مسئلہ کیا ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Sales Trend (فروخت کا رجحان)<br>
+Computation (حساب کتاب)<br>
+Impression (اندازہ)<br>
+Actual (حقیقی)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q33" onclick="check(this,false)">
+No chart was created
+</label>
+
+<label class="option">
+<input type="radio" name="q33" onclick="check(this,false)">
+Prose is less attractive
+</label>
+
+<label class="option">
+<input type="radio" name="q33" onclick="check(this,true)">
+Without code it is an impression, not an actual computation
+</label>
+
+<label class="option">
+<input type="radio" name="q33" onclick="check(this,false)">
+Files disappear after closing chat
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: A fluent answer does not prove that real calculation happened.<br><br>
+
+اردو: صرف اچھی زبان میں جواب دینے کا مطلب یہ نہیں کہ AI نے واقعی حساب کیا ہے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q34. What habit should an engineer adopt when choosing AI models?
+</h3>
+
+<p class="urdu">
+اردو: AI model منتخب کرتے وقت engineer کو کون سی عادت اپنانی چاہیے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Engineer (انجینئر)<br>
+Habit (عادت)<br>
+Compare (موازنہ کرنا)<br>
+Prompt (ہدایت)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q34" onclick="check(this,false)">
+Always use one model
+</label>
+
+<label class="option">
+<input type="radio" name="q34" onclick="check(this,true)">
+Try the same prompt on different models and compare results
+</label>
+
+<label class="option">
+<input type="radio" name="q34" onclick="check(this,false)">
+Always choose expensive models
+</label>
+
+<label class="option">
+<input type="radio" name="q34" onclick="check(this,false)">
+Follow rankings only
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Different models have different strengths.<br><br>
+
+اردو: مختلف models مختلف کاموں میں بہتر ہو سکتے ہیں، اس لیے compare کرنا چاہیے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q35. Re-uploading files every session is a signal of what?
+</h3>
+
+<p class="urdu">
+اردو: ہر session میں دوبارہ files upload کرنا کس چیز کی نشانی ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Re-upload (دوبارہ upload کرنا)<br>
+Session (ایک استعمال کا وقت)<br>
+Friction (رکاوٹ / مشکل)<br>
+Machine (کمپیوٹر)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q35" onclick="check(this,false)">
+Files are always too large
+</label>
+
+<label class="option">
+<input type="radio" name="q35" onclick="check(this,false)">
+Internet is always slow
+</label>
+
+<label class="option">
+<input type="radio" name="q35" onclick="check(this,true)">
+Repeated uploading is friction; it may be time to move work onto your machine
+</label>
+
+<label class="option">
+<input type="radio" name="q35" onclick="check(this,false)">
+AI cannot read folders
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Repeated manual work shows the workflow may need improvement.<br><br>
+
+اردو: بار بار ایک ہی کام کرنا اس بات کی نشانی ہے کہ طریقہ بہتر کرنے کی ضرورت ہے۔
+</div>
+
+</div>
+<!-- ================= PART 9 : Q36-Q40 ================= -->
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q36. What relationship between a five-section code brief and a spec skeleton does this reveal?
+</h3>
+
+<p class="urdu">
+اردو: پانچ حصوں والے code brief اور spec skeleton کے درمیان کیا تعلق ظاہر ہوتا ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Code Brief (کوڈ کے لیے ہدایات)<br>
+Spec Skeleton (منصوبے کا بنیادی ڈھانچہ)<br>
+Structure (ترتیب / بناوٹ)<br>
+Rules (اصول)<br>
+Exclusions (کیا شامل نہیں کرنا)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q36" onclick="check(this,true)">
+They use the same structure, separating rules and exclusions clearly
+</label>
+
+<label class="option">
+<input type="radio" name="q36" onclick="check(this,false)">
+Code briefs are only for programmers
+</label>
+
+<label class="option">
+<input type="radio" name="q36" onclick="check(this,false)">
+Spec removes the need for rules
+</label>
+
+<label class="option">
+<input type="radio" name="q36" onclick="check(this,false)">
+Writing code terms guarantees correct results
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Both provide clear structure, goals, rules, and limits.<br><br>
+
+اردو: دونوں کا مقصد کام کو واضح حصوں میں تقسیم کرنا ہے تاکہ AI بہتر سمجھ سکے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q37. What does rubric scoring plus cross-model checking demonstrate?
+</h3>
+
+<p class="urdu">
+اردو: Rubric scoring اور cross-model checking مل کر کیا ظاہر کرتے ہیں؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Rubric (جانچنے کا معیار)<br>
+Cross-model (مختلف AI models کے درمیان)<br>
+Blind Spot (ایسی غلطی جو نظر نہ آئے)<br>
+Score (نمبر دینا)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q37" onclick="check(this,true)">
+A rubric improves evaluation and another model adds different blind-spot coverage
+</label>
+
+<label class="option">
+<input type="radio" name="q37" onclick="check(this,false)">
+A rubric replaces the need for another model
+</label>
+
+<label class="option">
+<input type="radio" name="q37" onclick="check(this,false)">
+A second model makes criteria unnecessary
+</label>
+
+<label class="option">
+<input type="radio" name="q37" onclick="check(this,false)">
+They cannot be used together
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Rubrics give clear standards, while another model can reveal hidden mistakes.<br><br>
+
+اردو: Rubric واضح معیار دیتا ہے اور دوسرا model مختلف غلطیاں پکڑنے میں مدد کرتا ہے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q38. A manager gives AI full read/write access to a drive. What is the main risk?
+</h3>
+
+<p class="urdu">
+اردو: اگر manager AI کو پوری drive کی read/write access دے دے تو بڑا خطرہ کیا ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Read/Write Access (پڑھنے اور تبدیلی کی اجازت)<br>
+Drive (فائلوں کی جگہ)<br>
+Risk (خطرہ)<br>
+Permission (اجازت)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q38" onclick="check(this,false)">
+AI will become slower
+</label>
+
+<label class="option">
+<input type="radio" name="q38" onclick="check(this,true)">
+One wrong action can affect many files with no easy undo
+</label>
+
+<label class="option">
+<input type="radio" name="q38" onclick="check(this,false)">
+AI cannot open files
+</label>
+
+<label class="option">
+<input type="radio" name="q38" onclick="check(this,false)">
+It improves accuracy automatically
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Give only the minimum permissions needed.<br><br>
+
+اردو: AI کو صرف اتنی اجازت دیں جتنی ضروری ہو، زیادہ access خطرہ بڑھاتی ہے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q39. Why don't many installed Skills slow AI down?
+</h3>
+
+<p class="urdu">
+اردو: بہت سی installed Skills ہونے سے AI ہمیشہ slow کیوں نہیں ہوتا؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Installed (لگائی ہوئی)<br>
+Description (تفصیل)<br>
+Relevant (متعلقہ)<br>
+Instructions (ہدایات)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q39" onclick="check(this,true)">
+Only descriptions load first; full instructions load when needed
+</label>
+
+<label class="option">
+<input type="radio" name="q39" onclick="check(this,false)">
+All instructions run at the same time
+</label>
+
+<label class="option">
+<input type="radio" name="q39" onclick="check(this,false)">
+Skills are ignored completely
+</label>
+
+<label class="option">
+<input type="radio" name="q39" onclick="check(this,false)">
+More Skills always break AI
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: AI checks descriptions first and loads details only when relevant.<br><br>
+
+اردو: پہلے صرف description دیکھی جاتی ہے، مکمل instructions ضرورت پر استعمال ہوتی ہیں۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q40. AI script returns a red error message. What is the best next step?
+</h3>
+
+<p class="urdu">
+اردو: اگر AI script error دے تو اگلا بہترین قدم کیا ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Script (کوڈ / پروگرام)<br>
+Error (غلطی)<br>
+Diagnose (مسئلہ تلاش کرنا)<br>
+Rerun (دوبارہ چلانا)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q40" onclick="check(this,false)">
+Ignore the error
+</label>
+
+<label class="option">
+<input type="radio" name="q40" onclick="check(this,true)">
+Paste the error back and ask AI to diagnose, fix, and rerun
+</label>
+
+<label class="option">
+<input type="radio" name="q40" onclick="check(this,false)">
+Delete the whole project
+</label>
+
+<label class="option">
+<input type="radio" name="q40" onclick="check(this,false)">
+Change computer immediately
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Error messages help find and fix problems.<br><br>
+
+اردو: Error message واپس دے کر AI سے مسئلہ سمجھنے اور حل کرنے کو کہیں۔
+</div>
+
+</div>
+<!-- ================= PART 10 : Q41-Q50 ================= -->
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q41. A user asks AI to confirm that a legal clause fully protects a client. What is the main problem?
+</h3>
+
+<p class="urdu">
+اردو: ایک شخص AI سے پوچھتا ہے کہ کیا legal clause مکمل حفاظت دیتا ہے؟ مسئلہ کیا ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Legal Clause (قانونی شق)<br>
+Confirm (تصدیق کرنا)<br>
+Protect (حفاظت کرنا)<br>
+Conclusion (نتیجہ)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q41" onclick="check(this,true)">
+The question already suggests the answer, so AI may agree instead of testing it
+</label>
+
+<label class="option">
+<input type="radio" name="q41" onclick="check(this,false)">
+AI cannot understand legal words
+</label>
+
+<label class="option">
+<input type="radio" name="q41" onclick="check(this,false)">
+Long clauses always fail
+</label>
+
+<label class="option">
+<input type="radio" name="q41" onclick="check(this,false)">
+AI should always refuse legal questions
+</label>
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Leading questions can push AI toward agreement instead of analysis.<br><br>
+اردو: اگر سوال میں جواب پہلے سے شامل ہو تو AI تنقیدی جانچ کے بجائے ہاں کہہ سکتا ہے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q42. Why does a private family recipe get worse AI results than common recipes?
+</h3>
+
+<p class="urdu">
+اردو: خاندانی راز والی recipe کے بارے میں AI کا جواب عام recipes سے کمزور کیوں ہو سکتا ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Private (ذاتی / راز)<br>
+Family Recipe (خاندانی نسخہ)<br>
+Common (عام)<br>
+Training Data (وہ معلومات جن سے AI نے سیکھا)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q42" onclick="check(this,true)">
+Common recipes exist in training data, but private recipes may not
+</label>
+
+<label class="option">
+<input type="radio" name="q42" onclick="check(this,false)">
+AI dislikes family recipes
+</label>
+
+<label class="option">
+<input type="radio" name="q42" onclick="check(this,false)">
+Private recipes are always incorrect
+</label>
+
+<label class="option">
+<input type="radio" name="q42" onclick="check(this,false)">
+AI cannot understand food
+</label>
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: AI knows patterns from available information; private information may not exist there.<br><br>
+اردو: AI کے پاس وہ معلومات نہیں ہوتیں جو کبھی اس کے training data میں شامل ہی نہ ہوں۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q43. Why should humans check AI answers instead of trusting AI alone?
+</h3>
+
+<p class="urdu">
+اردو: انسان کو AI کے جواب خود کیوں چیک کرنے چاہئیں؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Verify (تصدیق کرنا)<br>
+Trust (بھروسہ)<br>
+Accuracy (درستگی)<br>
+Human Review (انسانی جانچ)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q43" onclick="check(this,true)">
+Human checking adds a truth check that AI does not have automatically
+</label>
+
+<label class="option">
+<input type="radio" name="q43" onclick="check(this,false)">
+AI never makes mistakes
+</label>
+
+<label class="option">
+<input type="radio" name="q43" onclick="check(this,false)">
+Humans should not use AI
+</label>
+
+<label class="option">
+<input type="radio" name="q43" onclick="check(this,false)">
+Checking wastes all time
+</label>
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Human review catches errors AI may miss.<br><br>
+اردو: انسان کی جانچ AI کی غلطیوں کو پکڑنے میں مدد دیتی ہے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q44. What is the safest first step before AI reorganizes hundreds of files?
+</h3>
+
+<p class="urdu">
+اردو: AI کو سینکڑوں files organize کرنے سے پہلے پہلا محفوظ قدم کیا ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Safest (سب سے محفوظ)<br>
+Reorganize (دوبارہ ترتیب دینا)<br>
+Plan (منصوبہ)<br>
+Approve (منظوری دینا)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q44" onclick="check(this,true)">
+Ask AI to show a plan first, review it, then approve
+</label>
+
+<label class="option">
+<input type="radio" name="q44" onclick="check(this,false)">
+Run everything immediately
+</label>
+
+<label class="option">
+<input type="radio" name="q44" onclick="check(this,false)">
+Give full access without review
+</label>
+
+<label class="option">
+<input type="radio" name="q44" onclick="check(this,false)">
+Delete backups
+</label>
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Planning before action reduces damage risk.<br><br>
+اردو: پہلے plan دیکھنا اور پھر اجازت دینا زیادہ محفوظ طریقہ ہے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q45. What does a connector do compared with a skill?
+</h3>
+
+<p class="urdu">
+اردو: Connector اور Skill میں بنیادی فرق کیا ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Connector (ڈیٹا سے رابطہ)<br>
+Skill (کام کرنے کا طریقہ)<br>
+Shape (ترتیب دینا)<br>
+Data (معلومات)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q45" onclick="check(this,true)">
+Connector brings data; Skill controls how the work is done
+</label>
+
+<label class="option">
+<input type="radio" name="q45" onclick="check(this,false)">
+They do exactly the same thing
+</label>
+
+<label class="option">
+<input type="radio" name="q45" onclick="check(this,false)">
+Skill stores all company data
+</label>
+
+<label class="option">
+<input type="radio" name="q45" onclick="check(this,false)">
+Connector writes all answers
+</label>
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: One connects information, the other defines the process.<br><br>
+اردو: Connector معلومات لاتا ہے، Skill کام کا طریقہ بتاتی ہے۔
+</div>
+
+</div>
+<!-- ================= PART 11 : Q46-Q50 ================= -->
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q46. Why should you use existing apps instead of custom code for common public rules?
+</h3>
+
+<p class="urdu">
+اردو: عام اور public rules کے لیے اپنا code بنانے کے بجائے موجودہ apps کیوں استعمال کرنی چاہئیں؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Existing (پہلے سے موجود)<br>
+Custom Code (خاص بنایا ہوا code)<br>
+Public Rule (عام اصول)<br>
+Reliable (قابل اعتماد)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q46" onclick="check(this,true)">
+Existing reliable tools already solve common problems
+</label>
+
+<label class="option">
+<input type="radio" name="q46" onclick="check(this,false)">
+Custom code is always better
+</label>
+
+<label class="option">
+<input type="radio" name="q46" onclick="check(this,false)">
+Apps cannot handle simple tasks
+</label>
+
+<label class="option">
+<input type="radio" name="q46" onclick="check(this,false)">
+AI cannot write code
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Do not build something from zero when a trusted solution already exists.<br><br>
+
+اردو: اگر اچھا تیار حل موجود ہو تو غیر ضروری نیا code نہیں بنانا چاہیے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q47. A manager wants AI to make important decisions without human approval. What is the main concern?
+</h3>
+
+<p class="urdu">
+اردو: ایک manager چاہتا ہے کہ AI بغیر انسانی اجازت کے اہم فیصلے کرے۔ بنیادی مسئلہ کیا ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Approval (منظوری)<br>
+Decision (فیصلہ)<br>
+Human Oversight (انسانی نگرانی)<br>
+Risk (خطرہ)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q47" onclick="check(this,true)">
+Important decisions need human oversight
+</label>
+
+<label class="option">
+<input type="radio" name="q47" onclick="check(this,false)">
+AI always refuses decisions
+</label>
+
+<label class="option">
+<input type="radio" name="q47" onclick="check(this,false)">
+Humans slow AI too much
+</label>
+
+<label class="option">
+<input type="radio" name="q47" onclick="check(this,false)">
+AI cannot process information
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Humans should stay involved in high-impact decisions.<br><br>
+
+اردو: اہم فیصلوں میں انسان کی نگرانی ضروری ہے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q48. Why can asking AI to critique its own work miss problems?
+</h3>
+
+<p class="urdu">
+اردو: AI سے اپنے ہی کام پر تنقید کروانے سے مسئلے کیوں رہ سکتے ہیں؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Critique (تنقید / جائزہ)<br>
+Blind Spot (چھپی ہوئی غلطی)<br>
+Self-review (خود جانچ)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q48" onclick="check(this,true)">
+The model may share the same blind spots as its original answer
+</label>
+
+<label class="option">
+<input type="radio" name="q48" onclick="check(this,false)">
+AI cannot read its own text
+</label>
+
+<label class="option">
+<input type="radio" name="q48" onclick="check(this,false)">
+Self-review always fixes everything
+</label>
+
+<label class="option">
+<input type="radio" name="q48" onclick="check(this,false)">
+AI refuses criticism
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: A second independent view can find errors the first view misses.<br><br>
+
+اردو: ایک ہی AI کی خود جانچ میں وہی غلطیاں رہ سکتی ہیں، اس لیے مختلف نظر بھی ضروری ہے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q49. Why is a leading question risky when asking AI for legal analysis?
+</h3>
+
+<p class="urdu">
+اردو: قانونی analysis کے لیے leading question خطرناک کیوں ہو سکتا ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Leading Question (ایسا سوال جس میں جواب کا اشارہ ہو)<br>
+Legal Analysis (قانونی تجزیہ)<br>
+Bias (جانبداری)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q49" onclick="check(this,true)">
+It pushes AI toward agreeing instead of testing the idea
+</label>
+
+<label class="option">
+<input type="radio" name="q49" onclick="check(this,false)">
+AI cannot understand law
+</label>
+
+<label class="option">
+<input type="radio" name="q49" onclick="check(this,false)">
+Long questions always fail
+</label>
+
+<label class="option">
+<input type="radio" name="q49" onclick="check(this,false)">
+AI should never answer questions
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Ask neutral questions to get better evaluation.<br><br>
+
+اردو: غیر جانبدار سوال پوچھیں تاکہ AI واقعی مسئلے کو جانچے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q50. Why does AI know common recipes better than a private family sauce recipe?
+</h3>
+
+<p class="urdu">
+اردو: AI عام recipes کو خاندانی secret recipe سے بہتر کیوں جان سکتا ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Common (عام)<br>
+Private (ذاتی / راز)<br>
+Training Footprint (سیکھنے میں موجود معلومات کا اثر)<br>
+Secret (راز)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q50" onclick="check(this,true)">
+Common recipes are represented in training data; private recipes may not be
+</label>
+
+<label class="option">
+<input type="radio" name="q50" onclick="check(this,false)">
+AI dislikes family recipes
+</label>
+
+<label class="option">
+<input type="radio" name="q50" onclick="check(this,false)">
+Secret recipes are always wrong
+</label>
+
+<label class="option">
+<input type="radio" name="q50" onclick="check(this,false)">
+AI cannot understand cooking
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: AI learns from available examples, not from unknown private information.<br><br>
+
+اردو: AI انہی چیزوں کے بارے میں بہتر جانتا ہے جو اس کے سیکھنے والے data میں موجود ہوں۔
+</div>
+
+</div>
+<!-- ================= PART 12 : Q51-Q55 ================= -->
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q51. What is the safest first step before AI reorganizes hundreds of files?
+</h3>
+
+<p class="urdu">
+اردو: AI کو سینکڑوں فائلیں دوبارہ ترتیب دینے سے پہلے سب سے محفوظ پہلا قدم کیا ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Safest (سب سے محفوظ)<br>
+Reorganize (دوبارہ ترتیب دینا)<br>
+Review (جائزہ لینا)<br>
+Approve (منظوری دینا)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q51" onclick="check(this,true)">
+Ask AI to show a plan first, review it, then approve the run
+</label>
+
+<label class="option">
+<input type="radio" name="q51" onclick="check(this,false)">
+Run it immediately on all files
+</label>
+
+<label class="option">
+<input type="radio" name="q51" onclick="check(this,false)">
+Give unlimited access first
+</label>
+
+<label class="option">
+<input type="radio" name="q51" onclick="check(this,false)">
+Delete backups before starting
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Planning and approval reduce the chance of harmful mistakes.<br><br>
+
+اردو: پہلے plan دیکھنا اور پھر اجازت دینا فائلوں کو محفوظ رکھتا ہے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q52. What idea do blast-radius rules and plan-then-approve share?
+</h3>
+
+<p class="urdu">
+اردو: Blast-radius rules اور plan-then-approve میں مشترک خیال کیا ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Blast Radius (غلطی کا پھیلاؤ)<br>
+Approve (منظوری دینا)<br>
+Impact (اثر)<br>
+Control (قابو)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q52" onclick="check(this,true)">
+Limit damage by controlling actions before they happen
+</label>
+
+<label class="option">
+<input type="radio" name="q52" onclick="check(this,false)">
+Trust every script automatically
+</label>
+
+<label class="option">
+<input type="radio" name="q52" onclick="check(this,false)">
+Remove all human checks
+</label>
+
+<label class="option">
+<input type="radio" name="q52" onclick="check(this,false)">
+Allow unlimited permissions
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Safety comes from limiting possible damage and reviewing actions.<br><br>
+
+اردو: نقصان کو کم کرنے کے لیے پہلے حدود اور اجازت کا نظام رکھنا ضروری ہے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q53. Why can custom sales-tax code become a problem compared with an accounting app?
+</h3>
+
+<p class="urdu">
+اردو: Accounting app کے مقابلے میں custom sales-tax code مسئلہ کیوں بن سکتا ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Custom (خاص بنایا ہوا)<br>
+Sales Tax (فروخت پر ٹیکس)<br>
+Accounting App (حساب کتاب کی ایپ)<br>
+Update (تبدیلی کرنا)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q53" onclick="check(this,true)">
+Custom code needs updates whenever tax rules change
+</label>
+
+<label class="option">
+<input type="radio" name="q53" onclick="check(this,false)">
+Code cannot calculate numbers
+</label>
+
+<label class="option">
+<input type="radio" name="q53" onclick="check(this,false)">
+Apps cannot handle taxes
+</label>
+
+<label class="option">
+<input type="radio" name="q53" onclick="check(this,false)">
+Taxes never change
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Public rules change, so maintained tools are often better.<br><br>
+
+اردو: قوانین بدلتے رہتے ہیں، اس لیے تیار اور update ہونے والی apps بہتر ہوتی ہیں۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q54. An AI script returns a red error message. What should you do?
+</h3>
+
+<p class="urdu">
+اردو: اگر AI script سرخ error message دے تو کیا کرنا چاہیے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Error (غلطی)<br>
+Diagnose (مسئلہ معلوم کرنا)<br>
+Fix (حل کرنا)<br>
+Rerun (دوبارہ چلانا)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q54" onclick="check(this,false)">
+Ignore the error
+</label>
+
+<label class="option">
+<input type="radio" name="q54" onclick="check(this,true)">
+Paste the error back and ask AI to diagnose, fix, and rerun
+</label>
+
+<label class="option">
+<input type="radio" name="q54" onclick="check(this,false)">
+Delete the script
+</label>
+
+<label class="option">
+<input type="radio" name="q54" onclick="check(this,false)">
+Restart everything
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Error messages provide clues for fixing problems.<br><br>
+
+اردو: Error کو واپس دے کر AI سے مسئلہ تلاش اور حل کروانا بہتر طریقہ ہے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q55. Why do many installed Skills not slow AI down?
+</h3>
+
+<p class="urdu">
+اردو: بہت سی installed Skills ہونے کے باوجود AI ہمیشہ slow کیوں نہیں ہوتا؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Installed (نصب شدہ)<br>
+Description (تفصیل)<br>
+Relevant (متعلقہ)<br>
+Instructions (ہدایات)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q55" onclick="check(this,true)">
+Only descriptions load first; full instructions load when needed
+</label>
+
+<label class="option">
+<input type="radio" name="q55" onclick="check(this,false)">
+All Skills run at the same time
+</label>
+
+<label class="option">
+<input type="radio" name="q55" onclick="check(this,false)">
+Skills are ignored completely
+</label>
+
+<label class="option">
+<input type="radio" name="q55" onclick="check(this,false)">
+More Skills always break AI
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: AI loads detailed instructions only when a Skill matches the task.<br><br>
+
+اردو: AI پہلے صرف description دیکھتا ہے، مکمل instructions ضرورت پر استعمال کرتا ہے۔
+</div>
+
+</div>
+<!-- ================= PART 13 : Q56-Q60 ================= -->
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q56. Why is giving AI full read/write access to a whole drive risky?
+</h3>
+
+<p class="urdu">
+اردو: AI کو پوری drive کی read/write access دینا خطرناک کیوں ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Read/Write Access (پڑھنے اور تبدیلی کی اجازت)<br>
+Drive (فائلوں کی جگہ)<br>
+Risky (خطرناک)<br>
+Undo (واپس کرنا)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q56" onclick="check(this,true)">
+One wrong action can affect many files with no easy undo
+</label>
+
+<label class="option">
+<input type="radio" name="q56" onclick="check(this,false)">
+AI will become slower
+</label>
+
+<label class="option">
+<input type="radio" name="q56" onclick="check(this,false)">
+AI cannot read files
+</label>
+
+<label class="option">
+<input type="radio" name="q56" onclick="check(this,false)">
+It improves safety automatically
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Give AI only the permissions it really needs.<br><br>
+
+اردو: AI کو صرف ضرورت کے مطابق اجازت دینی چاہیے، زیادہ access نقصان کا خطرہ بڑھاتی ہے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q57. What is the best format for a strict onboarding order?
+</h3>
+
+<p class="urdu">
+اردو: اگر کسی کام کے steps ایک خاص ترتیب میں کرنے ہوں تو کون سا format بہتر ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Strict (سخت / لازمی)<br>
+Onboarding (نئے شخص کو کام سکھانے کا عمل)<br>
+Sequence (ترتیب)<br>
+Numbered List (نمبر والی فہرست)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q57" onclick="check(this,true)">
+Use a numbered list because numbers show required order
+</label>
+
+<label class="option">
+<input type="radio" name="q57" onclick="check(this,false)">
+Use a random paragraph
+</label>
+
+<label class="option">
+<input type="radio" name="q57" onclick="check(this,false)">
+Use only images
+</label>
+
+<label class="option">
+<input type="radio" name="q57" onclick="check(this,false)">
+Repeat the same sentence many times
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Numbers clearly communicate order and priority.<br><br>
+
+اردو: جب ترتیب ضروری ہو تو numbered list زیادہ واضح ہوتی ہے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q58. What does human checking plus cross-model agreement demonstrate?
+</h3>
+
+<p class="urdu">
+اردو: Human checking اور cross-model agreement مل کر کیا ظاہر کرتے ہیں؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Cross-model (مختلف AI models کا موازنہ)<br>
+Agreement (اتفاق)<br>
+Truth-checker (حقیقت جانچنے والا عمل)<br>
+Memo (رپورٹ / نوٹ)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q58" onclick="check(this,true)">
+Human checking adds a truth-check step beyond model agreement
+</label>
+
+<label class="option">
+<input type="radio" name="q58" onclick="check(this,false)">
+Two models agreeing means it is always true
+</label>
+
+<label class="option">
+<input type="radio" name="q58" onclick="check(this,false)">
+Human checking is unnecessary
+</label>
+
+<label class="option">
+<input type="radio" name="q58" onclick="check(this,false)">
+Only one model should be used
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Agreement between models helps, but humans still verify truth.<br><br>
+
+اردو: دو AI کا متفق ہونا کافی نہیں، انسان کی جانچ بھی ضروری ہے۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q59. Why should you cross-check answers using different sources?
+</h3>
+
+<p class="urdu">
+اردو: مختلف sources سے جواب verify کرنا کیوں بہتر ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Cross-check (دوبارہ جانچ کرنا)<br>
+Source (ذریعہ)<br>
+Blind Spot (چھپی ہوئی غلطی)<br>
+Independent (آزاد)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q59" onclick="check(this,true)">
+Different sources can have different blind spots
+</label>
+
+<label class="option">
+<input type="radio" name="q59" onclick="check(this,false)">
+One source is always perfect
+</label>
+
+<label class="option">
+<input type="radio" name="q59" onclick="check(this,false)">
+More sources create more errors
+</label>
+
+<label class="option">
+<input type="radio" name="q59" onclick="check(this,false)">
+Checking wastes time always
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Independent checks reveal mistakes one source may miss.<br><br>
+
+اردو: مختلف ذرائع سے جانچ کرنے سے ایسی غلطیاں مل سکتی ہیں جو ایک جگہ نظر نہیں آتیں۔
+</div>
+
+</div>
+
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q60. Why should AI outputs be verified before important use?
+</h3>
+
+<p class="urdu">
+اردو: اہم کاموں میں AI کے output کو استعمال کرنے سے پہلے verify کیوں کرنا چاہیے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Output (نتیجہ)<br>
+Verify (تصدیق کرنا)<br>
+Important Use (اہم استعمال)<br>
+Accuracy (درستگی)
+</div>
+
+
+<label class="option">
+<input type="radio" name="q60" onclick="check(this,true)">
+Because fluent answers can still contain mistakes
+</label>
+
+<label class="option">
+<input type="radio" name="q60" onclick="check(this,false)">
+Because AI never works
+</label>
+
+<label class="option">
+<input type="radio" name="q60" onclick="check(this,false)">
+Because AI cannot write
+</label>
+
+<label class="option">
+<input type="radio" name="q60" onclick="check(this,false)">
+Because verification is unnecessary
+</label>
+
+
+<p class="result"></p>
+
+<div class="explain">
+<b>Explanation:</b><br>
+English: Good writing does not guarantee correct information.<br><br>
+
+اردو: AI کا جواب اچھا لگ سکتا ہے لیکن پھر بھی غلط ہو سکتا ہے، اس لیے جانچ ضروری ہے۔
+</div>
+
+</div>
+<!-- ================= PART 14 : Q61-Q72 ================= -->
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q61. Why is asking AI to grade its own work not always enough?
+</h3>
+
+<p class="urdu">
+اردو: AI سے اپنے ہی کام کو grade کروانا ہمیشہ کافی کیوں نہیں ہوتا؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Grade (نمبر دینا / جانچ کرنا)<br>
+Self-evaluation (خود جانچ)<br>
+Blind Spot (چھپی ہوئی غلطی)<br>
+Independent (آزاد)
+</div>
+
+<label class="option">
+<input type="radio" name="q61" onclick="check(this,true)">
+AI may miss the same problems because it has the same blind spots
+</label>
+
+<label class="option">
+<input type="radio" name="q61" onclick="check(this,false)">
+AI cannot read its own answer
+</label>
+
+<label class="option">
+<input type="radio" name="q61" onclick="check(this,false)">
+Self grading is always perfect
+</label>
+
+<label class="option">
+<input type="radio" name="q61" onclick="check(this,false)">
+AI refuses to evaluate
+</label>
+
+<p class="result"></p>
+
+<div class="explain">
+English: A different viewpoint can find mistakes the original one misses.<br><br>
+اردو: دوسری نظر سے جانچ کرنے پر وہ غلطیاں مل سکتی ہیں جو خود AI نہیں دیکھ پاتا۔
+</div>
+
+</div>
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q62. Why should you give AI clear rules and constraints?
+</h3>
+
+<p class="urdu">
+اردو: AI کو واضح rules اور constraints دینا کیوں ضروری ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Constraint (پابندی / شرط)<br>
+Rule (اصول)<br>
+Clear (واضح)<br>
+Requirement (ضرورت)
+</div>
+
+<label class="option">
+<input type="radio" name="q62" onclick="check(this,true)">
+Clear rules help AI understand exactly what is required
+</label>
+
+<label class="option">
+<input type="radio" name="q62" onclick="check(this,false)">
+Rules confuse AI always
+</label>
+
+<label class="option">
+<input type="radio" name="q62" onclick="check(this,false)">
+AI does not need instructions
+</label>
+
+<label class="option">
+<input type="radio" name="q62" onclick="check(this,false)">
+More unclear text is better
+</label>
+
+<p class="result"></p>
+
+<div class="explain">
+English: Clear instructions produce better results.<br><br>
+اردو: واضح ہدایات دینے سے AI زیادہ درست کام کرتا ہے۔
+</div>
+
+</div>
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q63. What is the purpose of a Skill in AI workflows?
+</h3>
+
+<p class="urdu">
+اردو: AI workflow میں Skill کا مقصد کیا ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Workflow (کام کا طریقہ)<br>
+Skill (خاص کام کی ہدایت)<br>
+Repeat (دوبارہ کرنا)<br>
+Process (عمل)
+</div>
+
+<label class="option">
+<input type="radio" name="q63" onclick="check(this,true)">
+Store a repeatable way of doing a task
+</label>
+
+<label class="option">
+<input type="radio" name="q63" onclick="check(this,false)">
+Replace every AI model
+</label>
+
+<label class="option">
+<input type="radio" name="q63" onclick="check(this,false)">
+Store all internet data
+</label>
+
+<label class="option">
+<input type="radio" name="q63" onclick="check(this,false)">
+Remove human decisions
+</label>
+
+<p class="result"></p>
+
+<div class="explain">
+English: Skills save repeatable methods.<br><br>
+اردو: Skill بار بار کیے جانے والے کام کا طریقہ محفوظ کرتی ہے۔
+</div>
+
+</div>
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q64. Why should important AI tasks include human approval?
+</h3>
+
+<p class="urdu">
+اردو: اہم AI کاموں میں human approval کیوں ضروری ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Approval (منظوری)<br>
+Human Oversight (انسانی نگرانی)<br>
+Decision (فیصلہ)
+</div>
+
+<label class="option">
+<input type="radio" name="q64" onclick="check(this,true)">
+Humans provide judgment and catch mistakes
+</label>
+
+<label class="option">
+<input type="radio" name="q64" onclick="check(this,false)">
+AI cannot do anything
+</label>
+
+<label class="option">
+<input type="radio" name="q64" onclick="check(this,false)">
+Approval slows all work
+</label>
+
+<label class="option">
+<input type="radio" name="q64" onclick="check(this,false)">
+AI has no value
+</label>
+
+<p class="result"></p>
+
+<div class="explain">
+English: Human review is important for high-impact actions.<br><br>
+اردو: بڑے فیصلوں میں انسان کی نگرانی ضروری ہوتی ہے۔
+</div>
+
+</div>
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q65. Why is a dry run useful before automation?
+</h3>
+
+<p class="urdu">
+اردو: Automation سے پہلے dry run کیوں فائدہ مند ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Dry Run (آزمائشی چلانا)<br>
+Automation (خودکار نظام)<br>
+Mistake (غلطی)
+</div>
+
+<label class="option">
+<input type="radio" name="q65" onclick="check(this,true)">
+It reveals problems before real changes happen
+</label>
+
+<label class="option">
+<input type="radio" name="q65" onclick="check(this,false)">
+It deletes files faster
+</label>
+
+<label class="option">
+<input type="radio" name="q65" onclick="check(this,false)">
+It removes all risks forever
+</label>
+
+<label class="option">
+<input type="radio" name="q65" onclick="check(this,false)">
+It replaces testing
+</label>
+
+<p class="result"></p>
+
+<div class="explain">
+English: Testing first reduces possible damage.<br><br>
+اردو: پہلے آزمائش کرنے سے غلطیوں کا خطرہ کم ہو جاتا ہے۔
+</div>
+
+</div>
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q66. Why compare multiple AI models?
+</h3>
+
+<p class="urdu">
+اردو: مختلف AI models کا موازنہ کیوں کرنا چاہیے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Compare (موازنہ)<br>
+Strength (طاقت)<br>
+Weakness (کمزوری)
+</div>
+
+<label class="option">
+<input type="radio" name="q66" onclick="check(this,true)">
+Different models may have different strengths
+</label>
+
+<label class="option">
+<input type="radio" name="q66" onclick="check(this,false)">
+All models are identical
+</label>
+
+<label class="option">
+<input type="radio" name="q66" onclick="check(this,false)">
+Only expensive models work
+</label>
+
+<label class="option">
+<input type="radio" name="q66" onclick="check(this,false)">
+Comparison is useless
+</label>
+
+<p class="result"></p>
+
+<div class="explain">
+English: Different models perform differently on tasks.<br><br>
+اردو: ہر model کی اپنی طاقت اور کمزوری ہوتی ہے۔
+</div>
+
+</div>
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q67. What does context window limit?
+</h3>
+
+<p class="urdu">
+اردو: Context window کی حد کیا ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Context Window (موجودہ معلومات رکھنے کی جگہ)<br>
+Limit (حد)<br>
+Memory (یادداشت)
+</div>
+
+<label class="option">
+<input type="radio" name="q67" onclick="check(this,true)">
+How much information AI can consider at one time
+</label>
+
+<label class="option">
+<input type="radio" name="q67" onclick="check(this,false)">
+AI intelligence forever
+</label>
+
+<label class="option">
+<input type="radio" name="q67" onclick="check(this,false)">
+Internet speed
+</label>
+
+<label class="option">
+<input type="radio" name="q67" onclick="check(this,false)">
+Computer screen size
+</label>
+
+<p class="result"></p>
+
+<div class="explain">
+English: Context window controls available information in a chat.<br><br>
+اردو: Context window بتاتا ہے کہ ایک وقت میں کتنی معلومات سامنے رہ سکتی ہیں۔
+</div>
+
+</div>
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q68. Why should you not assume AI remembers previous chats?
+</h3>
+
+<p class="urdu">
+اردو: AI کو پچھلی chats یاد رہنے کا یقین کیوں نہیں کرنا چاہیے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Assume (فرض کرنا)<br>
+Previous (پچھلی)<br>
+Conversation (گفتگو)
+</div>
+
+<label class="option">
+<input type="radio" name="q68" onclick="check(this,true)">
+A new chat may not contain old conversation details
+</label>
+
+<label class="option">
+<input type="radio" name="q68" onclick="check(this,false)">
+AI remembers everything forever
+</label>
+
+<label class="option">
+<input type="radio" name="q68" onclick="check(this,false)">
+AI stores every message automatically
+</label>
+
+<label class="option">
+<input type="radio" name="q68" onclick="check(this,false)">
+Memory never changes
+</label>
+
+<p class="result"></p>
+
+<div class="explain">
+English: Chat history and model memory are different things.<br><br>
+اردو: نئی چیٹ میں پرانی معلومات لازمی موجود نہیں ہوتیں۔
+</div>
+
+</div>
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q69. Why should private information be provided when needed?
+</h3>
+
+<p class="urdu">
+اردو: ضرورت کے وقت private information دینا کیوں ضروری ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Private (ذاتی)<br>
+Information (معلومات)<br>
+Provide (فراہم کرنا)
+</div>
+
+<label class="option">
+<input type="radio" name="q69" onclick="check(this,true)">
+AI cannot know private information it was never given
+</label>
+
+<label class="option">
+<input type="radio" name="q69" onclick="check(this,false)">
+AI knows all private data
+</label>
+
+<label class="option">
+<input type="radio" name="q69" onclick="check(this,false)">
+Private data is unnecessary
+</label>
+
+<label class="option">
+<input type="radio" name="q69" onclick="check(this,false)">
+AI guesses perfectly
+</label>
+
+<p class="result"></p>
+
+<div class="explain">
+English: AI needs access to information to use it.<br><br>
+اردو: جس معلومات تک AI کو رسائی نہ ہو، وہ اسے معلوم نہیں ہوتی۔
+</div>
+
+</div>
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q70. Why is verification important for AI generated information?
+</h3>
+
+<p class="urdu">
+اردو: AI کی بنائی ہوئی معلومات کو verify کرنا کیوں ضروری ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Generated (بنائی ہوئی)<br>
+Verification (تصدیق)<br>
+Information (معلومات)
+</div>
+
+<label class="option">
+<input type="radio" name="q70" onclick="check(this,true)">
+AI can generate incorrect but convincing answers
+</label>
+
+<label class="option">
+<input type="radio" name="q70" onclick="check(this,false)">
+AI always refuses answers
+</label>
+
+<label class="option">
+<input type="radio" name="q70" onclick="check(this,false)">
+Verification is never needed
+</label>
+
+<label class="option">
+<input type="radio" name="q70" onclick="check(this,false)">
+AI cannot write
+</label>
+
+<p class="result"></p>
+
+<div class="explain">
+English: Confidence and correctness are not the same.<br><br>
+اردو: پراعتماد جواب ہمیشہ صحیح نہیں ہوتا۔
+</div>
+
+</div>
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q71. What is the best habit when working with AI?
+</h3>
+
+<p class="urdu">
+اردو: AI کے ساتھ کام کرتے وقت بہترین عادت کیا ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Habit (عادت)<br>
+Review (جانچ)<br>
+Improve (بہتر کرنا)
+</div>
+
+<label class="option">
+<input type="radio" name="q71" onclick="check(this,true)">
+Give clear instructions and review important results
+</label>
+
+<label class="option">
+<input type="radio" name="q71" onclick="check(this,false)">
+Trust every answer blindly
+</label>
+
+<label class="option">
+<input type="radio" name="q71" onclick="check(this,false)">
+Never use AI
+</label>
+
+<label class="option">
+<input type="radio" name="q71" onclick="check(this,false)">
+Avoid checking results
+</label>
+
+<p class="result"></p>
+
+<div class="explain">
+English: Good AI use combines clear instructions and human judgment.<br><br>
+اردو: اچھا AI استعمال واضح ہدایات اور انسانی جانچ کا مجموعہ ہے۔
+</div>
+
+</div>
+
+
+
+<div class="quiz">
+
+<h3 class="question">
+Q72. What is the main principle for safe AI use?
+</h3>
+
+<p class="urdu">
+اردو: محفوظ AI استعمال کا بنیادی اصول کیا ہے؟
+</p>
+
+<div class="words">
+<b>Hard Words:</b><br>
+Principle (بنیادی اصول)<br>
+Safe (محفوظ)<br>
+Responsible (ذمہ دار)
+</div>
+
+<label class="option">
+<input type="radio" name="q72" onclick="check(this,true)">
+Use AI as a helper while keeping human control
+</label>
+
+<label class="option">
+<input type="radio" name="q72" onclick="check(this,false)">
+Let AI control everything
+</label>
+
+<label class="option">
+<input type="radio" name="q72" onclick="check(this,false)">
+Ignore mistakes
+</label>
+
+<label class="option">
+<input type="radio" name="q72" onclick="check(this,false)">
+Remove all human review
+</label>
+
+<p class="result"></p>
+
+<div class="explain">
+English: AI is powerful, but humans remain responsible.<br><br>
+اردو: AI مددگار ہے، لیکن آخری ذمہ داری انسان کی رہتی ہے۔
+</div>
+
+</div>
+<!-- آپ کے سارے 72 questions یہاں ختم ہوں گے -->
+
+
+<script>
+
+function check(option, correct){
+
+let result = option.parentElement.parentElement.querySelector(".result");
+
+if(correct){
+    result.innerHTML = "✅ Correct Answer! (صحیح جواب)";
+    result.style.color = "green";
+}
+else{
+    result.innerHTML = "❌ Wrong Answer! (غلط جواب)";
+    result.style.color = "red";
+}
+
+}
+
+</script>
+
+
 </body>
 </html>
